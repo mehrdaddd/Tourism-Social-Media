@@ -17,7 +17,7 @@
 .App-header {
   background-color: #222;
   height: 80px;
-  padding: 20px;
+  padding: 10px;
   color: #fff;
 }
 
@@ -146,6 +146,9 @@
 
 .whitt {
   color: #fff;
+  text-align: center;
+  font-size: 26px;
+
 }
 
 .contentt{
@@ -158,4 +161,20 @@ background: #fff;
 
 .items{
   font-size: 26px;
+}
+
+.navigation
+{
+  float: left;
+}
+
+.out
+{
+  float: right;
+  text-align: right;
+}
+
+.pages{
+  padding: 50px;
+  margin: 25px;
 }
