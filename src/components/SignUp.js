@@ -71,22 +71,26 @@ render() {
                    type="email"
                    placeholder="Email"
             />
-
+            &nbsp; &nbsp;
             <input value={passwordOne}
                    onChange={ event => this.setState(byPropKey('passwordOne', event.target.value))}
                    type="password"
                    placeholder="PasswordOne"
             />
-
+            &nbsp; &nbsp;
             <input value={passwordTwo}
                    onChange={ event => this.setState(byPropKey('passwordTwo', event.target.value))}
                    type="password"
                    placeholder="PasswordTwo"
             />
-
+            &nbsp; &nbsp;
             <button disabled={isInvalid} type="submit">
                 Sign Up
             </button>
+
+            <br />
+            <br />
+            <br />
 
             {error && <p>{error.message} </p>}
 

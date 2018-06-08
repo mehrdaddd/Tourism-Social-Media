@@ -13,15 +13,19 @@ var config = {
 };
 
 
-if(!firebase.apps.length)
-{
-    firebase.initializeApp(config);
-}
+
+    const app = firebase.initializeApp(config);
+
 
 
 
 const auth = firebase.auth();
 
+const facebookProvider = new firebase.auth.FacebookAuthProvider()
+var googleProvider = new firebase.auth.GoogleAuthProvider();
 export {
-    auth
+    auth,
+    app,
+    facebookProvider,
+    googleProvider
 };
