@@ -24,10 +24,11 @@ const auth = firebase.auth();
 const facebookProvider = new firebase.auth.FacebookAuthProvider()
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 const twitterProvider = new firebase.auth.TwitterAuthProvider();
+
 export {
     auth,
-    app,
     facebookProvider,
     googleProvider,
-    twitterProvider
+    twitterProvider,
+    app
 };

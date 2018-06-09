@@ -6,12 +6,10 @@ const WithAuthentication = (Component) => {
     class WithAuthentication extends  React.Component{
         constructor(props){
             super(props);
-
             this.state = {
               authUser: null
             };
         }
-
         componentDidMount() {
             firebase.auth.onAuthStateChanged(authUser => {
                 authUser

@@ -60,9 +60,9 @@ class SignInForm extends Component{
             password,
         }= this.state;
 
-        const {
-            history,
-        }=this.props;
+    const {
+    history,
+}=this.props;
 
 
         auth.doSignInEmailAndPassword(email,password)
@@ -76,7 +76,7 @@ class SignInForm extends Component{
         event.preventDefault();
     }
 
-    authWithFacebook() {
+        authWithFacebook() {
         app.auth().signInWithPopup(facebookProvider)
             .then(() => {
                 this.setState (() => ({ ...INITIAL_STATE}));
@@ -87,7 +87,7 @@ class SignInForm extends Component{
         });
     }
 
-    authWithGoogle() {
+   authWithGoogle() {
         app.auth().signInWithPopup(googleProvider)
             .then(() => {
                 this.setState (() => ({ ...INITIAL_STATE}));
@@ -124,61 +124,61 @@ class SignInForm extends Component{
         }
 
         return(
-            <div >
-                <form style={loginStyless}    onSubmit={this.onSubmit}>
+                    <div >
+                            <form style={loginStyless}    onSubmit={this.onSubmit}>
 
-                    <input     style={{width: "100%"}}
-                               ref={(input) => { this.emailInput = input }}
-                               value={email}
-                               onChange={ event => this.setState(byPropKey('email', event.target.value))}
-                               type="text"
-                               placeholder="Email"
-                    />
+                                <input     style={{width: "100%"}}
+                                           ref={(input) => { this.emailInput = input }}
+                                           value={email}
+                                           onChange={ event => this.setState(byPropKey('email', event.target.value))}
+                                           type="text"
+                                           placeholder="Email"
+                                />
 
-                    &nbsp; &nbsp;
+                                &nbsp; &nbsp;
 
-                    <input style={{width: "100%"}}
-                           value={password}
-                           onChange={ event => this.setState(byPropKey('password', event.target.value))}
-                           type="password"
-                           placeholder="Password"
-                    />
-                    &nbsp; &nbsp;
+                                <input style={{width: "100%"}}
+                                    value={password}
+                                       onChange={ event => this.setState(byPropKey('password', event.target.value))}
+                                       type="password"
+                                       placeholder="Password"
+                                />
+                                &nbsp; &nbsp;
 
-                    <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+                                <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
 
-                    <button disabled={isInvalid}  style={{width: "100%"}}  type="submit"   >
-                        Sign IN
-                    </button>
-                    <br />
+                                <button disabled={isInvalid}  style={{width: "100%"}}  type="submit"   >
+                                    Sign IN
+                                </button>
+                                <br />
 
 
-                    {error && <p>{error.message} </p> }
+                                {error && <p>{error.message} </p> }
 
-                </form>
+                            </form>
 
-                <div style={loginStyles}>
-                    <div style={{marginBottom: "10px"}} >
-                        <h5>Note</h5>
-                        If you don't have an account already, this form will create your account.
+                            <div style={loginStyles}>
+                                <div style={{marginBottom: "10px"}} >
+                                    <h5>Note</h5>
+                                    If you don't have an account already, this form will create your account.
+                                </div>
+                                     <Toaster ref={(element) => { this.toaster = element }} />
+                                    <button style={{width: "100%"}}  onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
+
+                               < br />
+                                <br />
+
+                                <button style={{width: "100%"}}  onClick={() => { this.authWithTwitter() }}>Log In with Twitter</button>
+
+                                <br />
+                                <br />
+
+                                  <button style={{width: "100%"}} onClick={() => { this.authWithGoogle() }}>Log In with Google</button>
+                                  <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+
+
+                            </div>
                     </div>
-                    <Toaster ref={(element) => { this.toaster = element }} />
-                    <button style={{width: "100%"}}  onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
-
-                    < br />
-                    <br />
-
-                    <button style={{width: "100%"}}  onClick={() => { this.authWithTwitter() }}>Log In with Twitter</button>
-
-                    <br />
-                    <br />
-
-                    <button style={{width: "100%"}} onClick={() => { this.authWithGoogle() }}>Log In with Google</button>
-                    <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
-
-
-                </div>
-            </div>
         );
     }
 }

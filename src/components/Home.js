@@ -20,21 +20,14 @@ class Home extends Component {
                 <div className="container">
                     <h1 className="page">
                         The Best Tourism Companies
-
                     </h1>
 
                 </div>
-
-
                 <Layout>
-
                     <MediaQuery minWidth={800}>
                         <Sider className="sider" width={300}>
-
                             <Ad/>
-
                             <Ad/>
-
                             <Ad/>
                         </Sider>
                     </MediaQuery>
@@ -54,12 +47,10 @@ class Home extends Component {
                                     <Commentt/>
                                 </ListGroupItem>
 
-
                                 <ListGroupItem> <a className="items" href="https://www.Booking.com"> Booking </a>
                                     <p>Booking is a travel meta search engine for lodging reservations for
                                         Accommodation, Flight, Taxi and Restaurant. </p>
                                     <Star/>
-
 
                                     <Commentt/>
                                 </ListGroupItem>

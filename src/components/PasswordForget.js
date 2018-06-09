@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom' ;
+
 import  {auth} from '../firebase';
 
 
 
 const PasswordForgetPage = () =>
-
-    <div className="pages">
-
+    <div>
         <PasswordForgetForm />
     </div>
 
@@ -57,21 +56,25 @@ class PasswordForgetForm extends Component {
         const isInvalid = email ==='';
 
         return (
-            <form  style={resetStyles}   onSubmit={this.onSubmit}>
+            <form  onSubmit={this.onSubmit} style={resetStyles}   >
 
                 <h1>
                     PasswordForget
                 </h1>
-                <input style={{width: "100%"}} className="pt-button pt-intent-primary"
+                <input
+
+                    style={{width: "100%"}}
                     value={this.state.email}
                     onChange={ event => this.setState(byPropKey('email', event.target.value))}
                     type="text"
                     placeholder="Email Address" />
 
                 &nbsp; &nbsp;
+
                 <br />
                 <br />
-                <button disabled={isInvalid} type="submit"  style={{width: "100%"}} className="pt-button pt-intent-primary">
+
+                <button disabled={isInvalid} type="submit"  style={{width: "100%"}} >
                     Reset My Password
                 </button>
 
@@ -86,7 +89,6 @@ const PasswordForgetLink= () =>
     <p>
         <Link to="/pw-forget"> Forget Password? </Link>
     </p>
-
 
 export default PasswordForgetPage;
 

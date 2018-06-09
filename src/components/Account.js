@@ -4,24 +4,23 @@ import  {PasswordForgetForm} from './PasswordForget';
 import PasswordChangeForm from './PasswordChange';
 import WithAuthorization from './withAuthorizationnnn';
 import 'bootstrap';
-
-
-
 const AccountPage =() =>
 
    <AuthUserContext.Consumer>
 
         {authUser =>
 
-            <form >
+            <div>
 
                 <PasswordForgetForm   />
 
                 <PasswordChangeForm  />
-            </form>
+
+            </div>
         }
     </AuthUserContext.Consumer>
 
-    const authCondtion = (authUser) => authUser ;
 
-export default WithAuthorization(authCondtion)(AccountPage);
+const authCondition = (authUser) =>  !!authUser ;
+
+export default  WithAuthorization (authCondition)(AccountPage);
