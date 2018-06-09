@@ -3,7 +3,6 @@ import 'antd/dist/antd.css';
 import './App.css';
 import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
 import Star from './Star';
-import Footer from "./Footer";
 import Commentt from "./Commentt";
 import Ad from "./Ad";
 import {Layout} from 'antd';
@@ -388,7 +387,7 @@ class Home extends Component {
 
                 </Layout>
 
-                <Footer/>
+
             </div>
             </Router>
 

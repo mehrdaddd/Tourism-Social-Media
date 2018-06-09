@@ -3,7 +3,7 @@ import { withRouter} from 'react-router-dom';
 import {SignUpLink} from './SignUp'
 import * as routes from '../constants/routes';
 import {auth} from '../firebase';
-import {app ,facebookProvider,googleProvider} from '../firebase/firebase';
+import {app ,facebookProvider,googleProvider, twitterProvider} from '../firebase/firebase';
 import  {PasswordForgetLink} from "./PasswordForget";
 import './App.css';
 import { Redirect } from 'react-router-dom'
@@ -11,23 +11,29 @@ import { Toaster, Intent } from '@blueprintjs/core'
 
 const loginStyles = {
     width: "90%",
-    maxWidth: "315px",
-    margin: "20px auto",
+    maxWidth: "350px",
+    margin: "15px auto",
     border: "1px solid #ddd",
     borderRadius: "5px",
     padding: "10px"
 }
 
-const SignInPage= ({history, historyy}) =>
-    <div   className="pages">
+const loginStyless = {
+    width: "90%",
+    maxWidth: "600px",
+    margin: "15px auto",
+    border: "1px solid #ddd",
+    borderRadius: "5px",
+    padding: "20px"
+}
+
+const SignInPage= ({history}) =>
+    <div   >
         <h1>SignIn </h1>
-        <SignInForm history={history} historyy={historyy}/>
+        <SignInForm history={history} />
         <PasswordForgetLink />
         <SignUpLink />
     </div>
-
-
-
 
 const byPropKey = (propertyName, value) => () => ({ [propertyName]: value,});
 
@@ -59,8 +65,6 @@ class SignInForm extends Component{
 }=this.props;
 
 
-
-
         auth.doSignInEmailAndPassword(email,password)
             .then (() => {
                 this.setState (() => ({ ...INITIAL_STATE}));
@@ -72,7 +76,7 @@ class SignInForm extends Component{
         event.preventDefault();
     }
 
-authWithFacebook() {
+        authWithFacebook() {
         app.auth().signInWithPopup(facebookProvider)
             .then(() => {
                 this.setState (() => ({ ...INITIAL_STATE}));
@@ -94,10 +98,15 @@ authWithFacebook() {
         });
     }
 
+    authWithTwitter() {
 
+        app.auth().signInWithPopup(twitterProvider).then(() => {
+            this.setState({ redirect: true });
 
-
-
+        }).catch(error => {
+            this.toaster.show({ intent: Intent.DANGER, message: "Unable to sign in with Twitter" })
+        });
+    }
 
     render() {
         const {
@@ -114,60 +123,62 @@ authWithFacebook() {
             return <Redirect to={{ pathname: '/home' } }/>
         }
 
-
-
-
         return(
-<div>
-            <form className="pages"    onSubmit={this.onSubmit}>
+                    <div >
+                            <form style={loginStyless}    onSubmit={this.onSubmit}>
+
+                                <input     style={{width: "100%"}}
+                                           ref={(input) => { this.emailInput = input }}
+                                           value={email}
+                                           onChange={ event => this.setState(byPropKey('email', event.target.value))}
+                                           type="text"
+                                           placeholder="Email"
+                                />
+
+                                &nbsp; &nbsp;
+
+                                <input style={{width: "100%"}}
+                                    value={password}
+                                       onChange={ event => this.setState(byPropKey('password', event.target.value))}
+                                       type="password"
+                                       placeholder="Password"
+                                />
+                                &nbsp; &nbsp;
+
+                                <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+
+                                <button disabled={isInvalid}  style={{width: "100%"}}  type="submit"   >
+                                    Sign IN
+                                </button>
+                                <br />
 
 
-                <input     className="pt-input"
-                           ref={(input) => { this.emailInput = input }}
-                           value={email}
-                           onChange={ event => this.setState(byPropKey('email', event.target.value))}
-                           type="text"
-                           placeholder="Email"
-                />
+                                {error && <p>{error.message} </p> }
 
-                &nbsp; &nbsp;
+                            </form>
 
-                <input className="pt-input"
-                    value={password}
-                       onChange={ event => this.setState(byPropKey('password', event.target.value))}
-                       type="password"
-                       placeholder="Password"
-                />
-                &nbsp; &nbsp;
+                            <div style={loginStyles}>
+                                <div style={{marginBottom: "10px"}} >
+                                    <h5>Note</h5>
+                                    If you don't have an account already, this form will create your account.
+                                </div>
+                                     <Toaster ref={(element) => { this.toaster = element }} />
+                                    <button style={{width: "100%"}}  onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
 
-                <button disabled={isInvalid}  className="pt-button pt-intent-primary" style={{width: "30%"}} type="submit"   >
-                    Sign IN
-                </button>
-                <br />
-                <br />
-                <br />
+                               < br />
+                                <br />
 
-                {error && <p>{error.message} </p> }
+                                <button style={{width: "100%"}}  onClick={() => { this.authWithTwitter() }}>Log In with Twitter</button>
 
-            </form>
+                                <br />
+                                <br />
 
-            <div style={loginStyles}>
-                <div style={{marginBottom: "10px"}} className="pt-callout pt-icon-info-sign">
-                    <h5>Note</h5>
-                    If you don't have an account already, this form will create your account.
-                </div>
-            <Toaster ref={(element) => { this.toaster = element }} />
-        <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
-
-                <br />
-                <br />
-
-        <button style={{width: "100%"}} className="pt-button pt-intent-primary" onClick={() => { this.authWithGoogle() }}>Log In with Google</button>
-        <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+                                  <button style={{width: "100%"}} onClick={() => { this.authWithGoogle() }}>Log In with Google</button>
+                                  <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
 
 
-        </div>
-</div>
+                            </div>
+                    </div>
         );
     }
 }

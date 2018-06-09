@@ -19,7 +19,7 @@ const NavigationNonAuth=() =>
     <ul className="navigation">
         <li><Link to={routes.HOME}> Home </Link></li>
         <li><Link to={routes.SIGN_IN}> Sign In </Link></li>
-        <li><Link to={routes.SIGN_UP}> SignUp </Link></li>
+        <li><Link to={routes.SIGN_UP}> Sign Up </Link></li>
     </ul>
 
 const NavigationAuth =() =>
@@ -34,8 +34,6 @@ const NavigationAuth =() =>
 
     </ul>
     </div>
-
-
 
         export default Navigation;
 

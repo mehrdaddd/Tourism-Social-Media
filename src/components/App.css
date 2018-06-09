@@ -107,15 +107,6 @@
   border-bottom: 1px solid #38BB6C;
 }
 
-.footer {
-
-    background-color: #222;
-    height: 80px;
-    padding: 0px 50px 0px 0px;
-    color: #fff;
-    text-align: right;
-
-}
 
 .comment{
   text-align: left;
@@ -139,7 +130,7 @@
 }
 
 .sider{
- background-color: #fff;
+  background-color: #fff;
   padding-top: 150px;
   margin: .2px;
 }
@@ -152,7 +143,7 @@
 }
 
 .contentt{
-background: #fff;
+  background: #fff;
   padding: 3px;
   margin: 0;
   minHeight: 280;
@@ -178,3 +169,25 @@ background: #fff;
   padding: 50px;
   margin: 25px;
 }
+
+.loginStyles = {
+  width: 90%;
+  maxWidth: 350px;
+  margin: 70px auto;
+  border: 1px solid #ddd;
+  borderRadius: 5px;
+  padding: 10px;
+}
+
+.footer {
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 0px 50px 0px 0px;
+  text-align: right;
+}
+

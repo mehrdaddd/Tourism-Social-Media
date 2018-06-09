@@ -22,10 +22,12 @@ var config = {
 const auth = firebase.auth();
 
 const facebookProvider = new firebase.auth.FacebookAuthProvider()
-var googleProvider = new firebase.auth.GoogleAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const twitterProvider = new firebase.auth.TwitterAuthProvider();
 export {
     auth,
     app,
     facebookProvider,
-    googleProvider
+    googleProvider,
+    twitterProvider
 };

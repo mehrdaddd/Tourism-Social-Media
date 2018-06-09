@@ -3,6 +3,17 @@ import {Link, withRouter} from 'react-router-dom';
 import * as routes from '../constants/routes';
 import {auth} from '../firebase';
 import './App.css';
+
+const SignUpStyles = {
+    width: "90%",
+    maxWidth: "350px",
+    margin: "20px auto",
+    border: "1px solid #ddd",
+    borderRadius: "5px",
+    padding: "10px"
+}
+
+
 const SignUpPage = ({history}) =>
     <div className="pages">
         <h1>SignUp </h1>
@@ -64,31 +75,35 @@ render() {
         email === '' ;
 
     return(
-        <form className="pages"   onSubmit={this.onSubmit}>
+        <form style={SignUpStyles}  onSubmit={this.onSubmit}>
 
             <input value={email}
+                   style={{width: "100%"}} className="pt-button pt-intent-primary"
                    onChange={ event => this.setState(byPropKey('email', event.target.value))}
                    type="email"
                    placeholder="Email"
             />
             &nbsp; &nbsp;
             <input value={passwordOne}
+                   style={{width: "100%"}} className="pt-button pt-intent-primary"
                    onChange={ event => this.setState(byPropKey('passwordOne', event.target.value))}
                    type="password"
                    placeholder="PasswordOne"
             />
             &nbsp; &nbsp;
             <input value={passwordTwo}
+                   style={{width: "100%"}} className="pt-button pt-intent-primary"
                    onChange={ event => this.setState(byPropKey('passwordTwo', event.target.value))}
                    type="password"
                    placeholder="PasswordTwo"
             />
             &nbsp; &nbsp;
-            <button disabled={isInvalid} type="submit">
+
+            <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
+            <button disabled={isInvalid} style={{width: "100%"}} className="pt-button pt-intent-primary" type="submit">
                 Sign Up
             </button>
 
-            <br />
             <br />
             <br />
 

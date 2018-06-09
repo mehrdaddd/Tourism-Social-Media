@@ -2,14 +2,24 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom' ;
 import  {auth} from '../firebase';
 
+
+
 const PasswordForgetPage = () =>
 
     <div className="pages">
-        <h1>
-            PasswordForget
-        </h1>
+
         <PasswordForgetForm />
     </div>
+
+
+const resetStyles = {
+    width: "90%",
+    maxWidth: "350px",
+    margin: "70px auto",
+    border: "1px solid #ddd",
+    borderRadius: "5px",
+    padding: "40px"
+}
 
 const byPropKey = ( propertyName , value) => () => ({
     [propertyName]: value,
@@ -47,13 +57,21 @@ class PasswordForgetForm extends Component {
         const isInvalid = email ==='';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
+            <form  style={resetStyles}   onSubmit={this.onSubmit}>
+
+                <h1>
+                    PasswordForget
+                </h1>
+                <input style={{width: "100%"}} className="pt-button pt-intent-primary"
                     value={this.state.email}
                     onChange={ event => this.setState(byPropKey('email', event.target.value))}
                     type="text"
                     placeholder="Email Address" />
-                <button disabled={isInvalid} type="submit">
+
+                &nbsp; &nbsp;
+                <br />
+                <br />
+                <button disabled={isInvalid} type="submit"  style={{width: "100%"}} className="pt-button pt-intent-primary">
                     Reset My Password
                 </button>
 

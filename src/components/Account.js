@@ -3,17 +3,22 @@ import  AuthUserContext from './AuthUserContext';
 import  {PasswordForgetForm} from './PasswordForget';
 import PasswordChangeForm from './PasswordChange';
 import WithAuthorization from './withAuthorizationnnn';
+import 'bootstrap';
+
+
+
 const AccountPage =() =>
 
    <AuthUserContext.Consumer>
 
         {authUser =>
 
-            <div className="pages">
+            <form >
 
-                <PasswordForgetForm className="pages" />
-                <PasswordChangeForm/>
-            </div>
+                <PasswordForgetForm   />
+
+                <PasswordChangeForm  />
+            </form>
         }
     </AuthUserContext.Consumer>
 
