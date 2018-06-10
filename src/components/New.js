@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
-import * as firebase from 'firebase' ;
+import {app } from '../firebase/firebase';
 
-
+var firebaseRef= app.database().ref();
+firebaseRef.child("Text").set("some value");
 
 
 class Componentt extends Component {
     constructor(){
         super();
         this.state = {
-            speed:10
-        };
+            rate:1
+    };
     }
 
-
-
     componentDidMount() {
-        const rootRef = firebase.database().ref().child('justgo');
-        const speedRef = rootRef.child('speed');
-        speedRef.on('value', snap => {
+        const rootRef = app.database().ref().child('star');
+        const rootStar = rootRef.child('Expedia');
+        rootStar.on('value', snap => {
             this.setState({
-                speed: snap.val()
+                rate: snap.val()
             });
         });
     }
@@ -29,7 +28,7 @@ class Componentt extends Component {
         return (
             <div >
                 Hi
-                <h1> {this.state.speed}</h1>
+                <h1> {this.state.rate}</h1>
             </div>
         );
     }
