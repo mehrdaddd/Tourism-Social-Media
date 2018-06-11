@@ -9,8 +9,8 @@ import {Layout} from 'antd';
 import MediaQuery from 'react-responsive';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Multifunctional from './Multifunctional';
-
 const {Content, Sider} = Layout;
+
 class Home extends Component {
 
     render() {

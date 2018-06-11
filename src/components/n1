@@ -10,7 +10,7 @@ class Componentt extends Component {
         super();
         this.state = {
             rate:1
-        };
+    };
     }
 
     componentDidMount() {
