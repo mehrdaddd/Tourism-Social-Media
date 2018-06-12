@@ -4,7 +4,7 @@ import {app} from "../firebase/firebase";
 
 // database
 /*
-const rootstar = app.database().ref().child('app').child('panel').child('items').child('starrrr');
+
 
 var i=0;
 var rate=0;
@@ -14,17 +14,15 @@ rootstar.on('child_added', snap  => {
     rate += snap.val();
     orate=rate/i;
 });
-
+*/
 //rating
+const rootstar = app.database().ref().child('app').child('panels').child('items').child('item2').child('star');
 const rchange = (value) => {
     rootstar.push().set(value);
     alert( "Your Rating is saved");
-
 }
-*/
+
 // main component-
-
-
 
 
 class Star extends Component {
@@ -64,7 +62,7 @@ class Star extends Component {
                             color2={'#ffd700'}
                             color1={'black'}
                             half={false}
-                    // onChange={rchange}
+                            onChange={rchange}
                 />
             </div>
         );

@@ -5,42 +5,29 @@ import Star from './Star';
 import Commentt from "./Commentt";
 import {app } from '../firebase/firebase';
 
-//database
-/*
-const roothead = app.database().ref().child('app').child('panel');
-const head=[];
-const body=[];
-const name=[];
-const text=[];
-roothead.on('value', snap => {
 
-        head[0]= snap.child('head').val();
-        body[0]=snap.child('body').val();
-        name[0]= snap.child('items').child('name').val();
-        name[2]= snap.child('items2').child('name').val();
-        name[3]= snap.child('items3').child('name').val();
-        name[4]= snap.child('items4').child('name').val();
-        text[0]= snap.child('items').child('text').val();
-        text[2]= snap.child('items2').child('text').val();
-        text[3]= snap.child('items3').child('text').val();
-        text[4]= snap.child('items4').child('text').val();
-});
-
-console.log(head[0]);
-*/
 class Multifunctionall  extends Component {
 
 
     constructor(props){
        super(props);
-       this.rootstar = app.database().ref().child('app').child('panels').child('items');
+       this.root = app.database().ref().child('app').child('panels').child('items');
+       // const rootstar = app.database().ref().child('app').child('panels').child('items').child('item2').child('star');
         this.state = {
        panels:[]
         };
+       // this.rchange= this.rchange.bind(this);
     }
+
+    /*
+    this.rchange = (value) => {
+        rootstar.push().set(value);
+        alert( "Your Rating is saved");
+    }
+*/
     componentWillMount() {
         const  ppanels=this.state.panels ;
-        this.rootstar.on('child_added', snap => {
+        this.root.on('child_added', snap => {
             ppanels.push({
                 id:snap.key,
                 name:snap.child('name').val(),
@@ -53,26 +40,7 @@ class Multifunctionall  extends Component {
             });
         });
     }
-    /*      componentDidMount() {
-              const roothead = app.database().ref().child('app').child('panel');
 
-              roothead.on('value', snap => {
-                  this.setState({
-                      head: snap.child('head').val(),
-                      body: snap.child('body').val(),
-                      name: snap.child('items').child('name').val(),
-                      name2: snap.child('items2').child('name').val(),
-                      name3: snap.child('items3').child('name').val(),
-                      name4: snap.child('items4').child('name').val(),
-                      text: snap.child('items').child('text').val(),
-                      text2: snap.child('items2').child('text').val(),
-                      text3: snap.child('items3').child('text').val(),
-                      text4: snap.child('items4').child('text').val()
-
-                  });
-              });
-          }
-          */
     render() {
 
         return (
@@ -85,7 +53,7 @@ class Multifunctionall  extends Component {
 
                                 <ListGroupItem> <a className="items" href={panel.link}> {panel.name} </a>
                                     <p>{panel.text}</p>
-                                    <Star value={panel.star} />
+                                    <Star value={panel.star}   />
                                     <Commentt/>
                                 </ListGroupItem>
 
