@@ -8,14 +8,10 @@ import Ad from "./Ad";
 import {Layout} from 'antd';
 import MediaQuery from 'react-responsive';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Multifunctional from './Multifunctional';
+import Multifunctionall from './Multifunctionall';
 const {Content, Sider} = Layout;
 
 class Home extends Component {
-    constructor(props){
-        super(props);
-    }
-
 
     render() {
 
@@ -43,7 +39,7 @@ class Home extends Component {
 
                         <Content className="contentt">
 
-                            <Multifunctional/>
+                            <Multifunctionall/>
 
                             <Panel className="table">
                                 <Panel.Heading><h1>Booking Accommodation </h1></Panel.Heading>

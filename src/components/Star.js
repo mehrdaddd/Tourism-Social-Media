@@ -4,7 +4,7 @@ import {app} from "../firebase/firebase";
 
 // database
 /*
-const rootstar = app.database().ref().child('app').child('panel').child('items').child('star');
+const rootstar = app.database().ref().child('app').child('panel').child('items').child('starrrr');
 
 var i=0;
 var rate=0;
@@ -31,44 +31,44 @@ class Star extends Component {
     constructor(props){
         super(props);
         this.state = {
-           // orate: orate,
+            // orate: orate,
             star:[],
             i:0
         };
     }
 
-  componentDidMount() {
+    componentDidMount() {
         const rootstar = app.database().ref().child('app').child('panel');
-             var i=0;
-             var star=[];
-                rootstar.on('child_added', snap  => {
-                    star[i]= snap.child('star').val();
-                    i +=1 ;
-                    this.setState({
-                        star: star,
-                        });
-                });
+        var i=0;
+        var star=[];
+        rootstar.on('child_added', snap  => {
+            star[i]= snap.child('star').val();
+            i +=1 ;
+            this.setState({
+                star: star,
+            });
+        });
 
     }
 
     render() {
 
-return(
+        return(
 
-    <div>
-    <h1>{this.state.star}</h1>
-<ReactStars className="star"
-    count={5}
-    size={30}
-    value={this.props.value}
-    color2={'#ffd700'}
-    color1={'black'}
-    half={false}
-    // onChange={rchange}
-/>
-    </div>
-);
-}
+            <div>
+                <h1>{this.state.star}</h1>
+                <ReactStars className="star"
+                            count={5}
+                            size={30}
+                            value={this.props.value}
+                            color2={'#ffd700'}
+                            color1={'black'}
+                            half={false}
+                    // onChange={rchange}
+                />
+            </div>
+        );
+    }
 }
 
 export default Star;
