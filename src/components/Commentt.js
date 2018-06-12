@@ -12,18 +12,30 @@ import { Collapse } from 'antd';
 import {app } from '../firebase/firebase';
 const Panel = Collapse.Panel;
 
+const roothead = app.database().ref().child('app').child('panel').child('items').child('comment group');
+
+var name;
+var date;
+var text;
+roothead.on('value', snap => {
+
+        name = snap.child('comment1').child('name').val();
+        date = snap.child('comment1').child('date').val();
+        text = snap.child('comment1').child('text').val();
+
+});
 
 class Commentt extends Component {
     constructor(){
         super();
         this.state = {
-            name: "1",
-            text: "1",
-            time: "1"
+            name: name,
+            text: text,
+            time: date
         };
     }
 
-    componentDidMount() {
+  /*  componentDidMount() {
         const roothead = app.database().ref().child('app').child('panel').child('items').child('comment group');
 
         roothead.on('value', snap => {
@@ -35,6 +47,7 @@ class Commentt extends Component {
             });
         });
     }
+    */
     render() {
         const provider = new ConversationResource({
             url: "https://conversation-service/",

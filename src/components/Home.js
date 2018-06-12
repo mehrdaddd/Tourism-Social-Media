@@ -12,8 +12,14 @@ import Multifunctional from './Multifunctional';
 const {Content, Sider} = Layout;
 
 class Home extends Component {
+    constructor(props){
+        super(props);
+    }
+
 
     render() {
+
+
         return (
             <Router>
                 <div className="App">
