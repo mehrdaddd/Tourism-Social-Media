@@ -34,7 +34,7 @@ class Star extends Component {
             i:0
         };
     }
-
+/*
     componentDidMount() {
         const rootstar = app.database().ref().child('app').child('panel');
         var i=0;
@@ -48,7 +48,7 @@ class Star extends Component {
         });
 
     }
-
+*/
     render() {
 
         return(
@@ -62,7 +62,7 @@ class Star extends Component {
                             color2={'#ffd700'}
                             color1={'black'}
                             half={false}
-                            onChange={rchange}
+
                 />
             </div>
         );
