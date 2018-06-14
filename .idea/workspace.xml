@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ba20cb-11ff-4cd4-bdc1-78177561c4ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Multifunctionall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Multifunctionall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Multifunctionallllll" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Multifunctionallllll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Star.js" afterDir="false" />
     </list>
     <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Star.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Star.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Star.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -30,14 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Multifunctionall.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Multifunctionall.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Multifunctionall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="48">
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Multifunctionallllll" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Multifunctionallllll">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="677">
+              <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -107,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/components/m" />
         <option value="$PROJECT_DIR$/src/components/Multifunctionallllll" />
-        <option value="$PROJECT_DIR$/src/components/Multifunctionall.js" />
         <option value="$PROJECT_DIR$/src/components/Star.js" />
+        <option value="$PROJECT_DIR$/src/components/Multifunctionall.js" />
       </list>
     </option>
   </component>
@@ -130,10 +141,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="59" />
-    <option name="y" value="29" />
+    <option name="x" value="150" />
+    <option name="y" value="224" />
     <option name="width" value="1456" />
-    <option name="height" value="859" />
+    <option name="height" value="679" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -143,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +188,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,34 +290,36 @@
       <workItem from="1528550954203" duration="3109000" />
       <workItem from="1528558199439" duration="57467000" />
       <workItem from="1528740646871" duration="34203000" />
-      <workItem from="1528879375553" duration="14000" />
+      <workItem from="1528879375553" duration="2684000" />
+      <workItem from="1528955847070" duration="873000" />
+      <workItem from="1528993621828" duration="13213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342856000" />
+    <option name="totallyTimeSpent" value="359612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" weight="0.39460155" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" weight="0.17120343" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286517" />
-      <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21448864" />
+      <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
       <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.066195376" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2055703" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.0" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.38328913" />
     </layout>
@@ -315,11 +328,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21448864" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" visible="true" weight="0.19151671" />
       <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -329,7 +342,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.38328913" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26657826" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" visible="true" weight="0.19151671" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,27 +643,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Multifunctionallllll">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Multifunctionall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="677">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Star.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Multifunctionall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
