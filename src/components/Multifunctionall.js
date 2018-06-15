@@ -5,33 +5,44 @@ import Star from './Star';
 import Commentt from "./Commentt";
 import {app } from '../firebase/firebase';
 
+// todo: fix mainroot
+//main root
+const mainroot = app.database().ref().child('app').child('panels');
+var headd;
+var bodyy;
+mainroot.on('value', sn => {
+    headd=  sn.child('head').val();
+    bodyy =  sn.child('body').val();
+})
+
+// component
 class Multifunctionall  extends Component {
 
     constructor(props){
         super(props);
         this.root = app.database().ref().child('app').child('panels').child('items');
-
         this.state = {
+            headd : headd,
+            bodyy: bodyy,
             panels:[]
         };
-    this.rchange= this.rchange.bind(this);
+        this.rchange= this.rchange.bind(this);
     }
 
 
     componentWillMount() {
         const  ppanels=this.state.panels ;
+        this.root.on('child_added', snap => {
+            const rom = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('rate');
 
-                this.root.on('child_added', snap => {
-                const rom = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('rate');
-
-                    var i=0;
-                    var rate=0;
-                    var orate=0;
-                    rom.on('child_added', sneep =>{
-                        i +=1 ;
-                        rate += sneep.val();
-                    })
-                    orate = rate/i;
+            var i=0;
+            var rate=0;
+            var orate=0;
+            rom.on('child_added', sneep =>{
+                i +=1 ;
+                rate += sneep.val();
+            })
+            orate = rate/i;
 
             ppanels.push({
                 id:snap.key,
@@ -40,7 +51,7 @@ class Multifunctionall  extends Component {
                 text:snap.child('text').val(),
                 star: orate
 
-            })
+            });
 
             this.setState({
                 panels: ppanels
@@ -48,7 +59,7 @@ class Multifunctionall  extends Component {
         });
     }
 
-      //
+    //
     rchange = (id, value) => {
         // rootstar.push().set(value);
         const rootstar = app.database().ref().child('app').child('panels').child('items');
@@ -62,13 +73,14 @@ class Multifunctionall  extends Component {
 
         return (
             <Panel className="table">
+
+
+                <Panel.Heading><h1>{this.state.headd} </h1></Panel.Heading>
+                <Panel.Body>{this.state.bodyy} </Panel.Body>
                 {this.state.panels.map((panel) =>{
-                    
+
                     return(
                         <div key={panel.id}>
-                            <Panel.Heading><h1>{this.state.head} </h1></Panel.Heading>
-                            <Panel.Body>{this.state.body} </Panel.Body>
-
                             <ListGroupItem> <a className="items" href={panel.link}> {panel.name} </a>
                                 <p>{panel.text}</p>
 

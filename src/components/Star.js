@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactStars from 'react-stars'
-import {app} from "../firebase/firebase";
+
 
 
 // main component-
