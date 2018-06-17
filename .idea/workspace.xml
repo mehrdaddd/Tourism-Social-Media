@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
     <list default="true" id="a5ba20cb-11ff-4cd4-bdc1-78177561c4ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Commentt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Commentt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Multifunctionall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Multifunctionall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Multifunctionallllll" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Multifunctionallllll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/comenttt" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comenttt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Multifunctionallllll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/comenttt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/n1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/starrrr" beforeDir="false" />
     </list>
-    <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,7 +29,7 @@
       <file leaf-file-name="Star.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Star.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-491">
+            <state relative-caret-position="-357">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -36,8 +41,8 @@
       <file leaf-file-name="Multifunctionall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Multifunctionall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2616">
-              <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+            <state relative-caret-position="168">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -45,33 +50,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comenttt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/comenttt">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="96">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Multifunctionallllll" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Multifunctionallllll">
+      <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="123" column="33" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Commentt.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Navigation.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Commentt.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Commentt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1672">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="243">
+              <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#94#132#0" expanded="true" />
-                <element signature="n#!!block;n#constructor#0;n#Commentt#0" />
               </folding>
             </state>
           </provider>
@@ -80,7 +96,7 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
+            <state relative-caret-position="96">
               <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
@@ -157,13 +173,11 @@
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/src/components/App.css" />
         <option value="$PROJECT_DIR$/src/constants/routes.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation.js" />
         <option value="$PROJECT_DIR$/src/components/WithAuthentication.js" />
         <option value="$PROJECT_DIR$/src/components/PasswordChange.js" />
         <option value="$PROJECT_DIR$/src/components/Sign In" />
         <option value="$PROJECT_DIR$/src/components/withauthrization" />
         <option value="$PROJECT_DIR$/src/components/withAuthentication" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/withAuthentication.js" />
         <option value="$PROJECT_DIR$/src/components/withAuthorizationnnn.js" />
         <option value="$PROJECT_DIR$/src/components/Account.js" />
@@ -184,8 +198,10 @@
         <option value="$PROJECT_DIR$/src/components/Star.js" />
         <option value="$PROJECT_DIR$/src/components/comenttt" />
         <option value="$PROJECT_DIR$/src/components/Multifunctionallllll" />
-        <option value="$PROJECT_DIR$/src/components/Multifunctionall.js" />
         <option value="$PROJECT_DIR$/src/components/Commentt.js" />
+        <option value="$PROJECT_DIR$/src/components/Multifunctionall.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation.js" />
       </list>
     </option>
   </component>
@@ -238,18 +254,6 @@
               <item name="masterproject Copy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="masterproject Copy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="masterproject Copy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="masterproject Copy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="masterproject Copy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="firebase" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -359,27 +363,27 @@
       <workItem from="1528879375553" duration="2684000" />
       <workItem from="1528955847070" duration="873000" />
       <workItem from="1528993621828" duration="48733000" />
-      <workItem from="1529165630703" duration="14960000" />
+      <workItem from="1529165630703" duration="19424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410092000" />
+    <option name="totallyTimeSpent" value="414556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5641892" visible="true" weight="0.18508998" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286517" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21448864" />
       <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
-      <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.066195376" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.10742705" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29310346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" visible="true" weight="0.16709511" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.35145888" />
+      <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -388,7 +392,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.38328913" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -446,7 +449,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Commentt.js</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -519,13 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -615,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/firebase/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -633,13 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-242">
           <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -662,23 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
           <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="90" column="25" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Star.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Multifunctionallllll">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
@@ -730,25 +696,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Commentt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#94#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Star.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Multifunctionall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2616">
-          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+        <state relative-caret-position="168">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Commentt.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1672">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="96">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#94#132#0" expanded="true" />
-            <element signature="n#!!block;n#constructor#0;n#Commentt#0" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
         </state>
       </provider>
     </entry>

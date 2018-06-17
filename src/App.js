@@ -26,13 +26,12 @@ const App = () =>
                 path={routes.HOME}
                 component={() => <Home/>}
             />
-
+            {/*
             <Route
                 path={routes.New}
                 component={() => <New />}
             />
-
-
+*/}
             <Route
                 exact path={routes.SIGN_IN}
                 component={() => <SignInPage/>}

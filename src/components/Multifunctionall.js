@@ -5,8 +5,6 @@ import Star from './Star';
 import Commentt from "./Commentt";
 import {app } from '../firebase/firebase';
 
-// todo: fix mainroot
-
 
 //main root
 const mainroot = app.database().ref().child('app').child('panels');
@@ -22,6 +20,8 @@ class Multifunctionall  extends Component {
 
     constructor(props){
         super(props);
+        this.mainroot= app.database().ref().child('app').child('panels');
+
         this.root = app.database().ref().child('app').child('panels').child('items');
         this.state = {
             headd : headd,
@@ -34,6 +34,14 @@ class Multifunctionall  extends Component {
     // database interaction with star comment cmponent
     componentWillMount() {
         const  ppanels=this.state.panels ;
+
+        this.mainroot.on('value', s => {
+            this.setState({
+                headd: s.child('head').val(),
+                bodyy: s.child('body').val(),
+            });
+            }
+        )
         this.root.on('child_added', snap => {
 
             //comment
@@ -41,10 +49,10 @@ class Multifunctionall  extends Component {
             const revise=[] ;
             comm.on('child_added', snepp => {
                     revise.push({
-                        id:snepp.key,
-                        name:snepp.child('name').val(),
-                        date:snepp.child('date').val(),
-                        text: snepp.child('text').val()
+                        id:    snepp.key,
+                        name:  snepp.child('name').val(),
+                        date:  snepp.child('date').val(),
+                        text:  snepp.child('text').val()
                     })
 
                         });
@@ -79,13 +87,11 @@ class Multifunctionall  extends Component {
 
     // enter for comment
     rchange = (id, value) => {
-
         const rootstar = app.database().ref().child('app').child('panels').child('items');
         rootstar.child(id).child('rate').push().set(value);
         alert( "Your Rating is saved " + id);
+        this.forceUpdate();
     }
-
-
 
     render() {
 

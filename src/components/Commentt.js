@@ -12,8 +12,6 @@ import { Collapse } from 'antd';
 import {app } from '../firebase/firebase';
 const Panel = Collapse.Panel;
 
-//todo :  be empty and reaction after enrer the comment
-
 
  // main class
 class Commentt extends Component {
@@ -22,21 +20,18 @@ class Commentt extends Component {
         this.state = {
             revises: [],
             comment: '',
-            //lm: this.props.lm
         };
             if(this.props.lm ){
                 this.state = {
                     revises: this.props.lm,
-                    //lm: this.props.lm
                 };
             }
 
           this.rooth = app.database().ref().child('app').child('panels').child('items');
           this.roothead = app.database().ref().child('app').child('panels').child('items').child('item1').child('comment group');
 
-       // console.log(this.state.revises );
+        this.emitEmpty = this.emitEmpty.bind(this);
     }
-
 
         emitEmpty = () => {
         this.userNameInput.focus();
@@ -50,7 +45,6 @@ class Commentt extends Component {
     //push data to database
     enterr = (e) => {
 
-        console.log(this.props.onPressEnterr);
         const rootp = app.database().ref().child('app').child('panels').child('items').child(this.props.onPressEnterr).child('comment group');
         var d = new Date();
         const data = {
@@ -59,8 +53,10 @@ class Commentt extends Component {
             date: d.toDateString(),
             name: 'Anonymous'
         }
-           rootp.push(data);
-            this.forceUpdate()
+            rootp.push(data);
+            this.forceUpdate();
+            this.emitEmpty();
+
     }
 
     render() {

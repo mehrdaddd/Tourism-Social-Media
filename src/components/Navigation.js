@@ -18,7 +18,7 @@ const Navigation =(  ) =>
 const NavigationNonAuth=() =>
     <ul className="navigation">
         <li><Link to={routes.HOME}> Home </Link></li>
-        <li><Link to={routes.New}> New </Link></li>
+        { /* <li><Link to={routes.New}> New </Link></li> */}
         <li><Link to={routes.SIGN_IN}> Sign In </Link></li>
         <li><Link to={routes.SIGN_UP}> Sign Up </Link></li>
     </ul>
