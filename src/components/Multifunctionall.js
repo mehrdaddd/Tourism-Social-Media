@@ -6,6 +6,8 @@ import Commentt from "./Commentt";
 import {app } from '../firebase/firebase';
 
 // todo: fix mainroot
+
+
 //main root
 const mainroot = app.database().ref().child('app').child('panels');
 var headd;
@@ -24,17 +26,31 @@ class Multifunctionall  extends Component {
         this.state = {
             headd : headd,
             bodyy: bodyy,
-            panels:[]
+            panels:[],
         };
         this.rchange= this.rchange.bind(this);
     }
 
-
+    // database interaction with star comment cmponent
     componentWillMount() {
         const  ppanels=this.state.panels ;
         this.root.on('child_added', snap => {
-            const rom = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('rate');
 
+            //comment
+            const comm = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('comment group');
+            const revise=[] ;
+            comm.on('child_added', snepp => {
+                    revise.push({
+                        id:snepp.key,
+                        name:snepp.child('name').val(),
+                        date:snepp.child('date').val(),
+                        text: snepp.child('text').val()
+                    })
+
+                        });
+
+            // star
+            const rom = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('rate');
             var i=0;
             var rate=0;
             var orate=0;
@@ -44,14 +60,16 @@ class Multifunctionall  extends Component {
             })
             orate = rate/i;
 
+            // main component
             ppanels.push({
                 id:snap.key,
+                revises:  revise,
                 name:snap.child('name').val(),
                 link:snap.child('link').val(),
                 text:snap.child('text').val(),
                 star: orate
 
-            });
+            })
 
             this.setState({
                 panels: ppanels
@@ -59,15 +77,15 @@ class Multifunctionall  extends Component {
         });
     }
 
-    //
+    // enter for comment
     rchange = (id, value) => {
-        // rootstar.push().set(value);
+
         const rootstar = app.database().ref().child('app').child('panels').child('items');
         rootstar.child(id).child('rate').push().set(value);
         alert( "Your Rating is saved " + id);
     }
 
-    //
+
 
     render() {
 
@@ -77,17 +95,21 @@ class Multifunctionall  extends Component {
 
                 <Panel.Heading><h1>{this.state.headd} </h1></Panel.Heading>
                 <Panel.Body>{this.state.bodyy} </Panel.Body>
+
                 {this.state.panels.map((panel) =>{
 
                     return(
                         <div key={panel.id}>
                             <ListGroupItem> <a className="items" href={panel.link}> {panel.name} </a>
+
                                 <p>{panel.text}</p>
 
                                 <Star value={panel.star}  onChange={(v) => this.rchange(panel.id,v)} />
 
 
-                                <Commentt/>
+                                <Commentt onPressEnterr={panel.id} lm={panel.revises} />
+
+
                             </ListGroupItem>
 
                             <ListGroupItem>&hellip;</ListGroupItem>

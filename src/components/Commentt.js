@@ -14,46 +14,29 @@ const Panel = Collapse.Panel;
 
 //todo :  be empty and reaction after enrer the comment
 
+
+ // main class
 class Commentt extends Component {
-    constructor(){
-        super();
-        this.rootcomm = app.database().ref('app/panels/items/item1/comment group');
-        this.roothead = app.database().ref().child('app').child('panels').child('items').child('item1').child('comment group');
+    constructor(props){
+        super(props);
         this.state = {
-            revises:[],
-            comment: ''
+            revises: [],
+            comment: '',
+            //lm: this.props.lm
         };
+            if(this.props.lm ){
+                this.state = {
+                    revises: this.props.lm,
+                    //lm: this.props.lm
+                };
+            }
+
+          this.rooth = app.database().ref().child('app').child('panels').child('items');
+          this.roothead = app.database().ref().child('app').child('panels').child('items').child('item1').child('comment group');
+
+       // console.log(this.state.revises );
     }
 
-  /*  componentDidMount() {
-        const roothead = app.database().ref().child('app').child('panels').child('items').child('item').child('comment group');
-
-        roothead.on('value', snap => {
-            this.setState({
-                name: snap.child('comment1').child('name').val(),
-                date: snap.child('comment1').child('date').val(),
-                text: snap.child('comment1').child('text').val()
-
-            });
-        });
-    }
-    */
-    componentDidMount() {
-        const ccoment= this.state.revises;
-        this.roothead.on('child_added', snap => {
-
-            ccoment.push({
-                id:snap.key,
-                name:snap.child('name').val(),
-                date:snap.child('date').val(),
-                text: snap.child('text').val()
-            });
-
-            this.setState({
-                revises:ccoment
-            });
-        });
-}
 
         emitEmpty = () => {
         this.userNameInput.focus();
@@ -64,18 +47,21 @@ class Commentt extends Component {
         this.setState({ comment: e.target.value });
     }
 
+    //push data to database
     enterr = (e) => {
-        console.log(e.target.value);
+
+        console.log(this.props.onPressEnterr);
+        const rootp = app.database().ref().child('app').child('panels').child('items').child(this.props.onPressEnterr).child('comment group');
         var d = new Date();
-        var data = {
+        const data = {
+
             text: e.target.value,
             date: d.toDateString(),
             name: 'Anonymous'
         }
-            this.rootcomm.push(data);
+           rootp.push(data);
+            this.forceUpdate()
     }
-
-        //set(e.target.value).set(d.toDateString());
 
     render() {
 
@@ -95,29 +81,30 @@ class Commentt extends Component {
                             onChange={this.onChangecomment}
                             ref={node => this.userNameInput = node}
                             onPressEnter={ this.enterr}
+
                         />
 
                         {this.state.revises.map((com) => {
                             return (
-                                <div key={com.id}>
-                                    <Comment
-                                        avatar={<Avatar label="Atlaskit avatar" size="medium"/>}
-                                        author={<CommentAuthor>{com.name}</CommentAuthor>}
-                                        time={<CommentTime>{com.date}</CommentTime>}
-                                        content={
-                                            <p className="commentext">
-                                                {com.text}
-                                            </p>
-                                        }
-                                        actions={[
-                                            <CommentAction>Reply</CommentAction>,
-                                            <CommentAction>Like</CommentAction>,
-                                        ]}
-                                    />
-                                </div>
+                            <div  key={com.id} style={{margin: 7}}>
+                            <Comment
+                            avatar={<Avatar label="Atlaskit avatar" size="medium"/>}
+                            author={<CommentAuthor>{com.name}</CommentAuthor>}
+                            time={<CommentTime>{com.date}</CommentTime>}
+                            content={
+                                <p className="commentext">
+                                    {com.text}
+                                </p>
+                                  }
+
+                            actions={[
+                            <CommentAction>Reply</CommentAction>,
+                            <CommentAction>Like</CommentAction>,
+                        ]}
+                            />
+                            </div>
                             );
                         })}
-
 
 
                     </Panel>
