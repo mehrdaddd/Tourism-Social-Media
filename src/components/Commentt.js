@@ -12,7 +12,6 @@ import { Collapse } from 'antd';
 import {app } from '../firebase/firebase';
 const Panel = Collapse.Panel;
 
-
  // main class
 class Commentt extends Component {
     constructor(props){
@@ -26,9 +25,6 @@ class Commentt extends Component {
                     revises: this.props.lm,
                 };
             }
-
-          this.rooth = app.database().ref().child('app').child('panels').child('items');
-          this.roothead = app.database().ref().child('app').child('panels').child('items').child('item1').child('comment group');
 
         this.emitEmpty = this.emitEmpty.bind(this);
     }
@@ -45,7 +41,7 @@ class Commentt extends Component {
     //push data to database
     enterr = (e) => {
 
-        const rootp = app.database().ref().child('app').child('panels').child('items').child(this.props.onPressEnterr).child('comment group');
+        const rootp = app.database().ref().child('app').child('panels').child(this.props.addr).child('items').child(this.props.onPressEnterr).child('comment group');
         var d = new Date();
         const data = {
 

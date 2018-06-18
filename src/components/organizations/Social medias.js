@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import './App.css';
+import '../App.css';
 import {Panel, ListGroupItem} from 'react-bootstrap';
-import Star from './Star';
-import Commentt from "./Commentt";
-import {app } from '../firebase/firebase';
-
+import Star from '../Star';
+import Commentt from "../Commentt";
+import {app } from '../../firebase/firebase';
 
 //main root
-const mainroot = app.database().ref().child('app').child('panels');
+const mainroot = app.database().ref().child('app').child('panels').child('socialmedia');
 var headd;
 var bodyy;
 mainroot.on('value', sn => {
-    headd=  sn.child('head').val();
+    headd=   sn.child('head').val();
     bodyy =  sn.child('body').val();
 })
 
@@ -20,45 +19,44 @@ class Multifunctionall  extends Component {
 
     constructor(props){
         super(props);
-        this.mainroot= app.database().ref().child('app').child('panels');
-
-        this.root = app.database().ref().child('app').child('panels').child('items');
+        this.mainroot= app.database().ref().child('app').child('panels').child('socialmedia');
+        this.root = app.database().ref().child('app').child('panels').child('socialmedia').child('items');
         this.state = {
             headd : headd,
             bodyy: bodyy,
-            panels:[],
+            socialmedia:[],
         };
         this.rchange= this.rchange.bind(this);
     }
 
     // database interaction with star comment cmponent
     componentWillMount() {
-        const  ppanels=this.state.panels ;
+        const  psocialmedia=this.state.socialmedia ;
 
         this.mainroot.on('value', s => {
-            this.setState({
-                headd: s.child('head').val(),
-                bodyy: s.child('body').val(),
-            });
+                this.setState({
+                    headd: s.child('head').val(),
+                    bodyy: s.child('body').val(),
+                });
             }
         )
         this.root.on('child_added', snap => {
 
             //comment
-            const comm = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('comment group');
+            const comm = app.database().ref().child('app').child('panels').child('socialmedia').child('items').child(snap.key).child('comment group');
             const revise=[] ;
             comm.on('child_added', snepp => {
-                    revise.push({
-                        id:    snepp.key,
-                        name:  snepp.child('name').val(),
-                        date:  snepp.child('date').val(),
-                        text:  snepp.child('text').val()
-                    })
+                revise.push({
+                    id:    snepp.key,
+                    name:  snepp.child('name').val(),
+                    date:  snepp.child('date').val(),
+                    text:  snepp.child('text').val()
+                })
 
-                        });
+            });
 
             // star
-            const rom = app.database().ref().child('app').child('panels').child('items').child(snap.key).child('rate');
+            const rom = app.database().ref().child('app').child('panels').child('socialmedia').child('items').child(snap.key).child('rate');
             var i=0;
             var rate=0;
             var orate=0;
@@ -69,7 +67,7 @@ class Multifunctionall  extends Component {
             orate = rate/i;
 
             // main component
-            ppanels.push({
+            psocialmedia.push({
                 id:snap.key,
                 revises:  revise,
                 name:snap.child('name').val(),
@@ -80,14 +78,14 @@ class Multifunctionall  extends Component {
             })
 
             this.setState({
-                panels: ppanels
+                socialmedia: psocialmedia
             });
         });
     }
 
     // enter for comment
     rchange = (id, value) => {
-        const rootstar = app.database().ref().child('app').child('panels').child('items');
+        const rootstar = app.database().ref().child('app').child('panels').child('socialmedia').child('items');
         rootstar.child(id).child('rate').push().set(value);
         alert( "Your Rating is saved " + id);
         this.forceUpdate();
@@ -102,7 +100,7 @@ class Multifunctionall  extends Component {
                 <Panel.Heading><h1>{this.state.headd} </h1></Panel.Heading>
                 <Panel.Body>{this.state.bodyy} </Panel.Body>
 
-                {this.state.panels.map((panel) =>{
+                {this.state.socialmedia.map((panel) =>{
 
                     return(
                         <div key={panel.id}>
@@ -113,7 +111,7 @@ class Multifunctionall  extends Component {
                                 <Star value={panel.star}  onChange={(v) => this.rchange(panel.id,v)} />
 
 
-                                <Commentt onPressEnterr={panel.id} lm={panel.revises} />
+                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"socialmedia"} />
 
 
                             </ListGroupItem>

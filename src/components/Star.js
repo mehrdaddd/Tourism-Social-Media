@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import ReactStars from 'react-stars'
 
-
-
 // main component-
 
 class Star extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            // orate: orate,
-            star:[],
-            i:0
-        };
-    }
+
 
     render() {
 
