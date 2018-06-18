@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5ba20cb-11ff-4cd4-bdc1-78177561c4ec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Accommodation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Accommodation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Flights.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Flights.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Restaurants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Social medias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Social medias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Tours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Tours.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/organizations/Train tickets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Train tickets.js" afterDir="false" />
-    </list>
+    <list default="true" id="a5ba20cb-11ff-4cd4-bdc1-78177561c4ec" name="Default" comment="" />
     <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,7 +128,7 @@
       <file leaf-file-name="Train tickets.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Train tickets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="84">
               <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -404,16 +392,15 @@
       <workItem from="1528993621828" duration="48733000" />
       <workItem from="1529165630703" duration="19424000" />
       <workItem from="1529325686798" duration="1182000" />
-      <workItem from="1529326892965" duration="11319000" />
+      <workItem from="1529326892965" duration="11977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427057000" />
+    <option name="totallyTimeSpent" value="427715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5641892" weight="0.20565553" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -424,7 +411,7 @@
       <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
       <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.066195376" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.234748" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.61803716" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -840,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Train tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="84">
           <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
