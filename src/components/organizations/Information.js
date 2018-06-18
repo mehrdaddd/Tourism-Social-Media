@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            pinformation.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 information: pinformation
             });

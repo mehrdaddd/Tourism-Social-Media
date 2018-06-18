@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            ptrain.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 train: ptrain
             });

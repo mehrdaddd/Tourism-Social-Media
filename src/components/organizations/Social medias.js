@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            psocialmedia.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 socialmedia: psocialmedia
             });

@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            ppanel1.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 panel1: ppanel1
             });

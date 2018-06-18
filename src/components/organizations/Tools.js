@@ -77,6 +77,9 @@ class Multifunctionall  extends Component {
 
             })
 
+            ptools.sort(function (b, a) {
+                return a.star - b.star;
+            });
             this.setState({
                 tools: ptools
             });

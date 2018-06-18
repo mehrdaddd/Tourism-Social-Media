@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
     <list default="true" id="a5ba20cb-11ff-4cd4-bdc1-78177561c4ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Commentt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Commentt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Multifunctionall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Star.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Accommodation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Accommodation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Flights.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Flights.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Restaurants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Social medias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Social medias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Tours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Tours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organizations/Train tickets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organizations/Train tickets.js" afterDir="false" />
     </list>
+    <list id="dc8452b7-e3a6-4706-9dd2-39725b856215" name="Master" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,10 +30,12 @@
       <file leaf-file-name="Multifunctionall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Multifunctionall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="113" column="85" lean-forward="true" selection-start-line="113" selection-start-column="85" selection-end-line="113" selection-end-column="109" />
+            <state relative-caret-position="312">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#1130#1281#0" />
+                <element signature="e#2760#3017#0" />
               </folding>
             </state>
           </provider>
@@ -37,8 +44,8 @@
       <file leaf-file-name="Accommodation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Accommodation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="113" column="106" selection-start-line="113" selection-start-column="106" selection-end-line="113" selection-end-column="106" />
+            <state relative-caret-position="240">
+              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -49,8 +56,8 @@
       <file leaf-file-name="Flights.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Flights.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="113" column="100" selection-start-line="113" selection-start-column="100" selection-end-line="113" selection-end-column="100" />
+            <state relative-caret-position="300">
+              <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -61,8 +68,8 @@
       <file leaf-file-name="Information.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Information.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+            <state relative-caret-position="300">
+              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -73,8 +80,8 @@
       <file leaf-file-name="Restaurants.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Restaurants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+            <state relative-caret-position="228">
+              <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -85,8 +92,8 @@
       <file leaf-file-name="Social medias.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Social medias.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+            <state relative-caret-position="228">
+              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -97,8 +104,8 @@
       <file leaf-file-name="Taxi and rental car.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="113" column="97" selection-start-line="113" selection-start-column="97" selection-end-line="113" selection-end-column="97" />
+            <state relative-caret-position="300">
+              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -109,8 +116,8 @@
       <file leaf-file-name="Tools.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Tools.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
+            <state relative-caret-position="300">
+              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -121,8 +128,8 @@
       <file leaf-file-name="Tours.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Tours.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
+            <state relative-caret-position="-12">
+              <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -133,8 +140,8 @@
       <file leaf-file-name="Train tickets.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/organizations/Train tickets.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+            <state relative-caret-position="261">
+              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -215,8 +222,8 @@
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Star.js" />
-        <option value="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" />
         <option value="$PROJECT_DIR$/src/components/Commentt.js" />
+        <option value="$PROJECT_DIR$/src/components/organizations/Multifunctionall.js" />
         <option value="$PROJECT_DIR$/src/components/organizations/Accommodation.js" />
         <option value="$PROJECT_DIR$/src/components/organizations/Flights.js" />
         <option value="$PROJECT_DIR$/src/components/organizations/Information.js" />
@@ -397,12 +404,12 @@
       <workItem from="1528993621828" duration="48733000" />
       <workItem from="1529165630703" duration="19424000" />
       <workItem from="1529325686798" duration="1182000" />
-      <workItem from="1529326892965" duration="5896000" />
+      <workItem from="1529326892965" duration="11319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421634000" />
+    <option name="totallyTimeSpent" value="427057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -417,7 +424,7 @@
       <window_info id="npm" order="2" sideWeight="0.4362069" side_tool="true" weight="0.1275" />
       <window_info id="Structure" order="1" sideWeight="0.43654823" side_tool="true" weight="0.14828898" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.066195376" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24668436" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.234748" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -711,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Homee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1758">
-          <caret line="358" selection-start-line="358" selection-end-line="358" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Commentt.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -739,20 +739,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Homee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="334" column="64" selection-start-line="334" selection-start-column="61" selection-end-line="334" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Multifunctionall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="113" column="85" lean-forward="true" selection-start-line="113" selection-start-column="85" selection-end-line="113" selection-end-column="109" />
+        <state relative-caret-position="312">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1130#1281#0" />
+            <element signature="e#2760#3017#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Accommodation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="113" column="106" selection-start-line="113" selection-start-column="106" selection-end-line="113" selection-end-column="106" />
+        <state relative-caret-position="240">
+          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -761,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Flights.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="113" column="100" selection-start-line="113" selection-start-column="100" selection-end-line="113" selection-end-column="100" />
+        <state relative-caret-position="300">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -771,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Information.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+        <state relative-caret-position="300">
+          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -781,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Restaurants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+        <state relative-caret-position="228">
+          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -791,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Social medias.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="113" column="104" selection-start-line="113" selection-start-column="104" selection-end-line="113" selection-end-column="104" />
+        <state relative-caret-position="228">
+          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -801,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Taxi and rental car.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="113" column="97" selection-start-line="113" selection-start-column="97" selection-end-line="113" selection-end-column="97" />
+        <state relative-caret-position="300">
+          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -811,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Tools.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
+        <state relative-caret-position="300">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -821,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Tours.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
+        <state relative-caret-position="-12">
+          <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -831,8 +840,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organizations/Train tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+        <state relative-caret-position="261">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

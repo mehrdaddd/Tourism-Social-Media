@@ -77,6 +77,9 @@ class Multifunctionall  extends Component {
 
             })
 
+            pflights.sort(function (b, a) {
+                return a.star - b.star;
+            });
             this.setState({
                 flights: pflights
             });

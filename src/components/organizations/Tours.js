@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            ptours.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 tours: ptours
             });

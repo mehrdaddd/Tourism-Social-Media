@@ -77,10 +77,15 @@ class Multifunctionall  extends Component {
 
             })
 
+            pmultifunctional.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 multifunctional: pmultifunctional
             });
         });
+
     }
 
     // enter for comment
@@ -92,6 +97,7 @@ class Multifunctionall  extends Component {
     }
 
     render() {
+
 
         return (
             <Panel className="table">

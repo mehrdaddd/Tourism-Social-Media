@@ -77,6 +77,10 @@ class Multifunctionall  extends Component {
 
             })
 
+            ptaxi.sort(function (b, a) {
+                return a.star - b.star;
+            });
+
             this.setState({
                 taxi: ptaxi
             });
