@@ -4,6 +4,7 @@ import {Panel, ListGroupItem} from 'react-bootstrap';
 import Star from '../Star';
 import Commentt from "../Commentt";
 import {app } from '../../firebase/firebase';
+import * as routes from "../../constants/routes";
 
 //main root
 const mainroot = app.database().ref().child('app').child('panels').child('multifunctional');
@@ -13,6 +14,7 @@ mainroot.on('value', sn => {
     headd=   sn.child('head').val();
     bodyy =  sn.child('body').val();
 })
+
 
 // component
 class Multifunctionall  extends Component {
@@ -25,7 +27,10 @@ class Multifunctionall  extends Component {
             headd : headd,
             bodyy: bodyy,
             multifunctional:[],
+            rend: ''
         };
+        this.rend=this.rend.bind(this);
+
         this.rchange= this.rchange.bind(this);
     }
 
@@ -88,6 +93,10 @@ class Multifunctionall  extends Component {
 
     }
 
+    rend = ( ) => {
+        console.log( "gi");
+
+    };
     // enter for comment
     rchange = (id, value) => {
         const rootstar = app.database().ref().child('app').child('panels').child('multifunctional').child('items');
@@ -100,13 +109,13 @@ class Multifunctionall  extends Component {
 
 
         return (
+            <div>
             <Panel className="table">
 
 
                 <Panel.Heading><h1>{this.state.headd} </h1></Panel.Heading>
                 <Panel.Body>{this.state.bodyy} </Panel.Body>
-
-                {this.state.multifunctional.map((panel) =>{
+                     {this.state.multifunctional.map((panel) =>{
 
                     return(
                         <div key={panel.id}>
@@ -117,19 +126,25 @@ class Multifunctionall  extends Component {
                                 <Star value={panel.star}  onChange={(v) => this.rchange(panel.id,v)} />
 
 
-                                <Commentt onPressEnterr={panel.id} lm={panel.revises}addr={"multifunctional"} />
+                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"multifunctional"} />
 
 
                             </ListGroupItem>
 
-                            <ListGroupItem>&hellip;</ListGroupItem>
+
+
+
+
                         </div>
                     )
                 })}
+                     <a href={routes.ADDMORE}> <ListGroupItem>Add More &hellip;</ListGroupItem>  </a>
 
-            </Panel>
+                 </Panel>
+            </div>
         );
     }
 }
 
 export default Multifunctionall ;
+

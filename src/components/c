@@ -27,13 +27,7 @@ const loginStyless = {
     padding: "20px"
 }
 
-const SignInPage= ({history}) =>
-    <div>
-        <h1>SignIn </h1>
-        <SignInForm history={history} />
-        <PasswordForgetLink />
-        <SignUpLink />
-    </div>
+
 
 const byPropKey = (propertyName, value) => () => ({ [propertyName]: value,});
 
@@ -109,14 +103,12 @@ class SignInForm extends Component{
 
     render() {
         const {
+            name,
             email,
-            password,
+            organization,
             error
         }=this.state;
 
-        const isInvalid =
-            password === '' ||
-            email === '' ;
 
         if (this.state.redirect === true) {
             return <Redirect to={{ pathname: '/home' } }/>
@@ -125,6 +117,20 @@ class SignInForm extends Component{
         return(
             <div >
                 <form style={loginStyless}    onSubmit={this.onSubmit}>
+
+                    <h1> Contact Us</h1>
+
+                    &nbsp; &nbsp;
+
+                    <input     style={{width: "100%"}}
+                               ref={(input) => { this.emailInput = input }}
+                               value={name}
+                               onChange={ event => this.setState(byPropKey('name', event.target.value))}
+                               type="text"
+                               placeholder="Name"
+                    />
+
+                    &nbsp; &nbsp;
 
                     <input     style={{width: "100%"}}
                                ref={(input) => { this.emailInput = input }}
@@ -136,19 +142,19 @@ class SignInForm extends Component{
 
                     &nbsp; &nbsp;
 
-                    <input style={{width: "100%"}}
-                           value={password}
-                           onChange={ event => this.setState(byPropKey('password', event.target.value))}
-                           type="password"
-                           placeholder="Password"
+                    <input     style={{width: "100%"}}
+                               ref={(input) => { this.emailInput = input }}
+                               value={organization}
+                               onChange={ event => this.setState(byPropKey('organization', event.target.value))}
+                               type="text"
+                               placeholder="Organization"
                     />
-
                     &nbsp; &nbsp;
 
                     <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
 
-                    <button disabled={isInvalid}  style={{width: "100%"}}  type="submit"   >
-                        Sign IN
+                    <button  style={{width: "100%"}}  type="submit"   >
+                        Submit
                     </button>
                     <br />
 
@@ -157,27 +163,7 @@ class SignInForm extends Component{
 
                 </form>
 
-                <div style={loginStyles}>
-                    <div style={{marginBottom: "10px"}} >
-                        <h5>Note</h5>
-                        If you don't have an account already, this form will create your account.
-                    </div>
-                    <Toaster ref={(element) => { this.toaster = element }} />
-                    <button style={{width: "100%"}}  onClick={() => { this.authWithFacebook() }}>Log In with Facebook</button>
 
-                    < br />
-                    <br />
-
-                    <button style={{width: "100%"}}  onClick={() => { this.authWithTwitter() }}>Log In with Twitter</button>
-
-                    <br />
-                    <br />
-
-                    <button style={{width: "100%"}} onClick={() => { this.authWithGoogle() }}>Log In with Google</button>
-                    <hr style={{marginTop: "10px", marginBottom: "10px"}}/>
-
-
-                </div>
             </div>
         );
     }
@@ -188,6 +174,5 @@ class SignInForm extends Component{
 
 
 
-export default withRouter(SignInPage);
+export default SignInForm;
 
-export {SignInForm};

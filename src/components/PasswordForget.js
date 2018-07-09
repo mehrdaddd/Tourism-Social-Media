@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom' ;
 import  {auth} from '../firebase';
-
+import './App.css';
 
 
 const PasswordForgetPage = () =>
@@ -9,15 +9,6 @@ const PasswordForgetPage = () =>
         <PasswordForgetForm />
     </div>
 
-
-const resetStyles = {
-    width: "90%",
-    maxWidth: "350px",
-    margin: "70px auto",
-    border: "1px solid #ddd",
-    borderRadius: "5px",
-    padding: "40px"
-}
 
 const byPropKey = ( propertyName , value) => () => ({
     [propertyName]: value,
@@ -55,10 +46,10 @@ class PasswordForgetForm extends Component {
         const isInvalid = email ==='';
 
         return (
-            <form  onSubmit={this.onSubmit} style={resetStyles}   >
+            <form  onSubmit={this.onSubmit} className="loginStyles"   >
 
                 <h1>
-                    PasswordForget
+                    Password Forget
                 </h1>
                 <input
 

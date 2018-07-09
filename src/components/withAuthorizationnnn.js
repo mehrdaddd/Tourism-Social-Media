@@ -10,7 +10,7 @@ const WithAuthorizationnnn = (authCondition) => (Component) => {
         componentDidMount() {
             firebase.auth.onAuthStateChanged(authUser => {
               if( !authCondition(authUser)){
-                  this.props.history.push(routes.HOME);
+                  this.props.history.push(routes.SIGN_IN);
               }
             });
         }

@@ -2,7 +2,6 @@ import React from 'react';
 import  {BrowserRouter as Router, Route} from 'react-router-dom';
 import './index.css';
 import Home from './components/Home';
-//import New from './components/New';
 import  * as routes from './constants/routes';
 import SignUpPage   from './components/SignUp';
 import SignInPage from './components/SignIn';
@@ -12,6 +11,10 @@ import WithAuthentication from './components/withAuthentication';
 import PasswordChangeForm from "./components/PasswordChange";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Contact from "./components/Contactus";
+import AddMore from "./components/AddMore";
+import Approvation from "./components/Approvation";
+
 
 const App = () =>
     <Router>
@@ -21,17 +24,27 @@ const App = () =>
                 component={() => <Header/>}
             />
 
-
             <Route
-                path={routes.HOME}
+                exact strict path={routes.HOME}
                 component={() => <Home/>}
             />
-            {/*
+
             <Route
-                path={routes.New}
-                component={() => <New />}
+                exact  strict path={routes.ADDMORE}
+                component={() => <AddMore/>}
             />
-*/}
+
+            <Route
+                exact  strict path={routes.APPROVATION}
+                component={() => <Approvation/>}
+            />
+
+            {/*
+                <Route
+                    path={routes.New}
+                    component={() => <New/>}
+                />
+            */}
             <Route
                 exact path={routes.SIGN_IN}
                 component={() => <SignInPage/>}
@@ -53,9 +66,15 @@ const App = () =>
                 exact path={routes.PASSWORD_FORGET}
                 component={() => <PaswordForgetPage/>}
             />
+
             <Route
                 exact path={routes.PASSWORD_CHANGE}
                 component={() => <PasswordChangeForm/>}
+            />
+
+            <Route
+                exact path={routes.ContactUs}
+                component={() => <Contact/>}
             />
 
             <Route

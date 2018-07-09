@@ -45,16 +45,16 @@ class SignUpForm extends Component{
         }=this.props;
 
         auth.doCreateUserWithEmailAndPassword(email , passwordOne)
-            .then(authUser =>{
+                    .then(authUser =>{
+                                     console.log(authUser);
+                             this.setState(() => ({...INITIAL_STATE}));
+                             history.push(routes.HOME);
+                         })
+                         .catch(error => {
+                            this.setState(byPropKey('error', error));
+                         });
 
-                     this.setState(() => ({...INITIAL_STATE}));
-                     history.push(routes.HOME);
-                 })
-                 .catch(error => {
-                    this.setState(byPropKey('error', error));
-                 });
-
-    event.preventDefault();
+                      event.preventDefault();
 }
 
 render() {
@@ -117,9 +117,6 @@ const SignUpLink=() =>
         {''}
         <Link to={routes.SIGN_UP}> Sign Up  </Link>
     </p>
-
-
-
 
 export default withRouter(SignUpPage);
 

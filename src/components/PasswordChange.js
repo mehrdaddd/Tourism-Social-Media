@@ -1,19 +1,12 @@
 import React, {Component} from 'react';
 import  {auth} from '../firebase';
-
+import './App.css';
 
 const byPropKey = ( propertyName , value) => () => ({
     [propertyName]: value,
 });
 
-const loginStyless = {
-    width: "90%",
-    maxWidth: "350px",
-    margin: "70px auto",
-    border: "1px solid #ddd",
-    borderRadius: "5px",
-    padding: "10px"
-}
+
 
 const INITIAL_STATE = {
     passwordOne: '',
@@ -51,7 +44,8 @@ class PasswordChangeForm extends Component {
             passwordOne === '';
 
         return (
-            <form  onSubmit={this.onSubmit} style={loginStyless} >
+            <div >
+                <form  onSubmit={this.onSubmit} className="loginStyles" >
 
                 <h1> Change Password </h1>
 
@@ -79,7 +73,7 @@ class PasswordChangeForm extends Component {
 
                 {error && <p> {error.message}</p>}
             </form>
-
+            </div>
         );
     }
 }

@@ -1,6 +1,3 @@
-import {app } from '../firebase/firebase';
-
-
 import React, {Component} from 'react';
 
 

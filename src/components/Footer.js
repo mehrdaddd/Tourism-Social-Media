@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import * as routes from "../constants/routes";
+import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -8,8 +10,7 @@ class Footer extends Component {
         return(
 <div className= "footer">
     <p className= "App-footer">The more explore the more ....</p>
-    <p >Contact Us</p>
-
+    <Link to={routes.ContactUs}> Contact Us  </Link>
 
 </div>
 

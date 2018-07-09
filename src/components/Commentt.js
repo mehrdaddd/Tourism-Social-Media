@@ -48,11 +48,10 @@ class Commentt extends Component {
             text: e.target.value,
             date: d.toDateString(),
             name: 'Anonymous'
-        }
+        };
             rootp.push(data);
             this.forceUpdate();
             this.emitEmpty();
-
     }
 
     render() {

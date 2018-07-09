@@ -146,7 +146,7 @@
   background: #fff;
   padding: 3px;
   margin: 0;
-  minHeight: 280;
+  min-height: 280;
   clear: right;
 }
 
@@ -166,18 +166,22 @@
 }
 
 .pages{
+  text-align: center;
   padding: 50px;
   margin: 25px;
 }
 
-.loginStyles = {
+.loginStyles  {
   width: 90%;
-  maxWidth: 350px;
+  max-width: 350px;
   margin: 70px auto;
   border: 1px solid #ddd;
-  borderRadius: 5px;
+  border-radius: 5px;
   padding: 10px;
+  min-height: 300px;
 }
+
+
 
 .footer {
   color: white;
@@ -191,3 +195,50 @@
   text-align: right;
 }
 
+.input {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.textarea {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.select {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contactusm{
+  width: 90%;
+  margin: 50px auto;
+  padding: 35px;
+  font-size: 25px;
+}
+
+.approvation{
+  width: 90%;
+  margin: 50px auto;
+  padding: 35px;
+  font-size: 25px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contactuss{
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.addmore{
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.paddin{
+  padding: 20px;
+}
