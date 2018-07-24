@@ -30,9 +30,9 @@ class Approvation extends Component {
                         valueweb: s.child('link').val(),
                         valueCompany: s.child('name').val(),
                         valueWebExplanation: s.child('text').val()
-           })
-           this.setState({
-               addd :prevadd
+                       })
+                       this.setState({
+                           addd :prevadd
            });
 
        });
@@ -40,7 +40,7 @@ class Approvation extends Component {
 
    //approve the company add copany to list and remove from aprovation
 approve=(add,id) => {
-    console.log(add);
+
     const addroot = app.database().ref().child('app').child('panels').child(add.select).child('items');
     const data = {
         link: add.valueweb,
@@ -169,6 +169,12 @@ approve=(add,id) => {
 
                                             authUser.uid === "FyPk0xDy60X1FDZ0LKcBY5tIuDh2"
                                         :    null;
+
+
+
+
+
+
 
 
 export default WithAuthorization (authCondition) (Approvation);

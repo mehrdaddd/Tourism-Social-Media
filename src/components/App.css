@@ -232,6 +232,20 @@
   font-size: 25px;
 }
 
+.profiless{
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.profilesm{
+  width: 60%;
+  margin: 50px auto;
+  padding: 35px;
+  font-size: 25px;
+}
+
 .addmore{
   width: 50%;
   margin: 10px auto;

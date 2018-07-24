@@ -6,6 +6,7 @@ import WithAuthorization from './withAuthorizationnnn';
 import 'bootstrap';
 import {ApprovationForm} from './Approvation';
 import {AddMoreForm} from "./AddMore";
+import {ProfileForm} from "./Profile";
 import { Row, Col } from 'antd';
 import MediaQuery from 'react-responsive';
 
@@ -20,21 +21,29 @@ const AccountPage =() =>
 
 
                <div className="gutter-example">
-                           <Row gutter={8}>
-      <Col className="gutter-row" span={6}>
-        <div className="gutter-box">  <PasswordForgetForm /> </div>
-      </Col>
-      <Col className="gutter-row" span={6}>
-        <div className="gutter-box"><PasswordChangeForm /></div>
-      </Col>
-      <Col className="gutter-row" span={6}>
-        <div className="gutter-box"> <ApprovationForm /> </div>
-      </Col>
-      <Col className="gutter-row" span={6}>
-        <div className="gutter-box"> <AddMoreForm /> </div>
-      </Col>
 
-    </Row>
+                           <Row gutter={2}>
+                                  <Col className="gutter-row" span={6}>
+                                    <div className="gutter-box">  <PasswordForgetForm /> </div>
+                                  </Col>
+                                  <Col className="gutter-row" span={6}>
+                                    <div className="gutter-box"><PasswordChangeForm /></div>
+                                  </Col>
+                                  <Col className="gutter-row" span={6}>
+                                    <div className="gutter-box"> <ApprovationForm /> </div>
+                                  </Col>
+                                  <Col className="gutter-row" span={6}>
+                                    <div className="gutter-box"> <AddMoreForm /> </div>
+                                  </Col>
+                           </Row>
+
+                           <Row gutter={2}>
+                               <Col className="gutter-row" span={6}>
+                                   <div className="gutter-box">  <ProfileForm /> </div>
+                               </Col>
+                           </Row>
+
+
                </div>
 
 
@@ -46,6 +55,7 @@ const AccountPage =() =>
                 <PasswordChangeForm />
                 <ApprovationForm />
                 <AddMoreForm />
+                <ProfileForm />
             </MediaQuery>
 </div>
         }

@@ -41,13 +41,9 @@ class AddMore extends Component {
            link: 'https://'+this.state.valueweb,
            name: this.state.valueCompany,
            text: this.state.valueWebExplanation,
-
        };
 
        addroot.push(data);
-
-
-
        this.setState(() => ({...INITIAL_STATE}));
        alert( "Your new company will be evaluate and send you back the feedback " );
        event.preventDefault();
@@ -87,7 +83,6 @@ class AddMore extends Component {
 
                     <FormControl componentClass="textarea" placeholder="Full Name" value={this.state.valueFull} onChange={ event => this.setState(byPropKey('valueFull', event.target.value))} />
                 </span>
-
                 <span  >
                     <ControlLabel> Email Address</ControlLabel>
                     <FormControl componentClass="textarea" placeholder="Email Address" value={this.state.email} onChange={ event => this.setState(byPropKey('email', event.target.value))} />

@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contactus";
 import AddMore from "./components/AddMore";
 import Approvation from "./components/Approvation";
+import Profile from "./components/Profile";
 
 
 const App = () =>
@@ -27,6 +28,11 @@ const App = () =>
             <Route
                 exact strict path={routes.HOME}
                 component={() => <Home/>}
+            />
+
+            <Route
+                exact strict path={routes.Profile}
+                component={() => <Profile/>}
             />
 
             <Route
