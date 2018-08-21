@@ -195,8 +195,7 @@
   bottom: 0;
   width: 100%;
   background-color: #222;
-  color: white;
-  padding: 0px 50px 0px 0px;
+  padding: 5px;
   text-align: right;
 }
 
@@ -260,5 +259,9 @@
 
 .paddin{
   padding: 20px;
-  margin: 10px auto;
+  margin: 50px auto;
+}
+.submit{
+  padding: 10px;
+  margin: 50px auto;
 }

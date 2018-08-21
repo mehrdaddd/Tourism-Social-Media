@@ -202,7 +202,7 @@ class Post extends Component {
                                  onChange={event => this.setState(byPropKey('more', event.target.value, authUser.email))}/>
                 </span>
 
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit" className="submit">Submit</Button>
                     </form>
                 }
             </ AuthUserContext.Consumer >

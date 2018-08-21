@@ -93,7 +93,7 @@ class SignInForm extends Component{
                 this.setState({ redirect: true });
 
             }).catch(error => {
-            this.toaster.show({ intent: Intent.DANGER, message: "Unable to sign in with Facebook" })
+            this.toaster.show({ intent: Intent.DANGER, message: "Unable to sign in with Google" })
         });
     }
 

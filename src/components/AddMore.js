@@ -140,7 +140,7 @@ class AddMore extends Component {
                     <FormControl componentClass="textarea" placeholder="Explanation" value={this.state.valueWebExplanation} onChange={ event => this.setState(byPropKey('valueWebExplanation', event.target.value))} />
                 </span>
 
-                <Button type="submit">Submit</Button>
+                <Button type="submit" className="submit" >Submit</Button>
             </form>
         );
     }
