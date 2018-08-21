@@ -6,32 +6,48 @@ import MediaQuery from 'react-responsive';
 import {Link} from 'react-router-dom' ;
 import './App.css';
 import WithAuthorization from "./withAuthorizationnnn";
-import  AuthUserContext from './AuthUserContext';
+import AuthUserContext from './AuthUserContext';
 
-class Approvation extends Component {
+class Approvationpost extends Component {
     constructor(props){
         super(props);
-        this.approveroot= app.database().ref().child('app').child('addmore');
+        this.approveroot= app.database().ref().child('app').child('addpost');
+
         this.state= {
-            addd:[]
+                  addd:[]
         };
         this.approve= this.approve.bind(this);
     }
 
     // show companys that wait for approvation
     componentWillMount() {
-        const prevadd= this.state.addd;
+        const prevadd = this.state.addd;
         this.approveroot.on('child_added', s => {
+            const approveselesctroot= app.database().ref().child('app').child('addpost').child(s.key).child("select");
+            var x = '';
+            approveselesctroot.on('child_added', sm => {
+
+                if (sm.val() === true) {
+
+                    x = sm.key + ", " + x;
+
+                }
+
+            })
+
             prevadd.push({
                 id: s.key,
-                select: s.child('organization').val(),
+                select: x,
                 ro: s.child('ro').val(),
-                valueFull: s.child('fullname').val(),
-                email: s.child('email').val(),
+                user: s.child('user').val(),
                 valueweb: s.child('link').val(),
                 valueCompany: s.child('name').val(),
-                valueWebExplanation: s.child('text').val()
+                valueWebExplanation: s.child('text').val(),
+                need: s.child('need').val(),
+                more: s.child('more').val()
             })
+
+
             this.setState({
                 addd :prevadd
             });
@@ -41,34 +57,27 @@ class Approvation extends Component {
 
     //approve the company add copany to list and remove from aprovation
     approve=(add,id) => {
-        if(add.ro == "panels") {
-            const addroot = app.database().ref().child('app').child(add.ro).child(add.select).child('items');
-            const data = {
-                link: add.valueweb,
-                name: add.valueCompany,
-                text: add.valueWebExplanation,
-                rate: {star: 0}
-            };
-            addroot.push(data);
-        }
-        else if (add.ro == "timeline"){
+
             const addroot = app.database().ref().child('app').child(add.ro).child("post").child('items');
             const data = {
                 link: add.valueweb,
+                user: add.user.slice(0, -10),
                 name: add.valueCompany,
                 text: add.valueWebExplanation,
+                need: add.need,
+                more: add.more,
                 rate: {star: 0}
             };
             addroot.push(data);
-        }
+
 
         //remove from  ...
         this.approveroot.child(add.id).remove();
 
         //Alert
-
-        alert(" The Company is approved");
         this.forceUpdate();
+        alert(" The Company is approved");
+
 
     }
 
@@ -98,26 +107,22 @@ class Approvation extends Component {
                                                     <td>Type</td>
                                                     <td>{add.ro}</td>
                                                 </tr>
+                                                </tbody>
 
+                                                <tbody>
                                                 <tr>
-                                                    <td>Type of organization</td>
+                                                    <td>User Name</td>
+                                                    <td>{add.user}</td>
+                                                </tr>
+                                                </tbody>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>Type of organizations</td>
                                                     <td>{add.select}</td>
                                                 </tr>
                                                 </tbody>
 
-                                                <tbody>
-                                                <tr>
-                                                    <td>Full Name</td>
-                                                    <td>{add.valueFull}</td>
-                                                </tr>
-                                                </tbody>
-
-                                                <tbody>
-                                                <tr>
-                                                    <td> Email Address</td>
-                                                    <td>{add.email}</td>
-                                                </tr>
-                                                </tbody>
 
                                                 <tbody>
                                                 <tr>
@@ -137,6 +142,20 @@ class Approvation extends Component {
                                                 <tr>
                                                     <td> Explanation</td>
                                                     <td>{add.valueWebExplanation}</td>
+                                                </tr>
+                                                </tbody>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td> Need</td>
+                                                    <td>{add.need}</td>
+                                                </tr>
+                                                </tbody>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td> More</td>
+                                                    <td>{add.more}</td>
                                                 </tr>
                                                 </tbody>
 
@@ -171,11 +190,11 @@ class Approvation extends Component {
     }
 }
 
-const ApprovationForm = () =>
+const ApprovationpostForm = () =>
     <form className="loginStyles">
-        <Link to="/approvation"> <h1>  To Approve the new Company </h1> </Link>
+        <Link to="/approvationpost"> <h1>  To Approve the Posts </h1> </Link>
         <br/>
-        <h3>Just managers can access </h3>
+        <h3>Just managers can access this part</h3>
     </form>
 
 
@@ -192,8 +211,8 @@ const authCondition = (authUser) =>  authUser ?
 
 
 
-export default WithAuthorization (authCondition) (Approvation);
+export default WithAuthorization (authCondition) (Approvationpost);
 
 
-export  {ApprovationForm} ;
+export  {ApprovationpostForm} ;
 

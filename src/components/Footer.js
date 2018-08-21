@@ -10,7 +10,7 @@ class Footer extends Component {
         return(
 <div className= "footer">
     <p className= "App-footer">The more explore the more ....</p>
-    <Link to={routes.ContactUs}> Contact Us  </Link>
+    <Link to={routes.CONTACTUS}> Contact Us  </Link>
 
 </div>
 

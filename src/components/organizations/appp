@@ -50,7 +50,7 @@ const App = () =>
             />
 
 
-            <Route  exact strict path="/show-profile/:uid" component={ShowProfile}/>
+            <Route  exact strict path="/show-profile/:id" component={ShowProfile}/>
 
             <Route
                 exact  strict path={routes.ADDMORE}

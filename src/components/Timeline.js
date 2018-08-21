@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
-import '../App.css';
+import './App.css';
 import {Panel, ListGroupItem} from 'react-bootstrap';
-import Star from '../Star';
-import Commentt from "../Commentt";
-import {app } from '../../firebase/firebase';
+import Star from './Star';
+import Commentt from "./Commentt";
+import {app } from './../firebase/firebase';
+import {Link} from 'react-router-dom' ;
 
+        //   <Link to={{
+//                                         pathname: "/showProfile",
+//                                         search: '?sort=name',
+//                                         hash: '#the-hash',
+//                                         state: { fromDashboard: true }
+//
+//                                     }}>
+//                                         m
+//                                     </Link>
+// <Link to="/ShowProfile" params={{ user: panel.user }}> {panel.user} </Link>
 //main root
-const mainroot = app.database().ref().child('app').child('panels').child('accommodation');
+const mainroot = app.database().ref().child('app').child('timeline').child('post');
 var headd;
 var bodyy;
 mainroot.on('value', sn => {
@@ -15,12 +26,12 @@ mainroot.on('value', sn => {
 })
 
 // component
-class Multifunctionall  extends Component {
+class Timeline  extends Component {
 
     constructor(props){
         super(props);
-        this.mainroot= app.database().ref().child('app').child('panels').child('accommodation');
-        this.root = app.database().ref().child('app').child('panels').child('accommodation').child('items');
+        this.mainroot= app.database().ref().child('app').child('timeline').child('post');
+        this.root = app.database().ref().child('app').child('timeline').child('post').child('items');
         this.state = {
             headd : headd,
             bodyy: bodyy,
@@ -33,6 +44,7 @@ class Multifunctionall  extends Component {
     componentWillMount() {
         const  ppanel1=this.state.panel1 ;
 
+        // information of header
         this.mainroot.on('value', s => {
                 this.setState({
                     headd: s.child('head').val(),
@@ -40,10 +52,11 @@ class Multifunctionall  extends Component {
                 });
             }
         )
+        // comentt
         this.root.on('child_added', snap => {
 
             //comment
-            const comm = app.database().ref().child('app').child('panels').child('accommodation').child('items').child(snap.key).child('comment group');
+            const comm = app.database().ref().child('app').child('timeline').child('post').child('items').child(snap.key).child('comment group');
             const revise=[] ;
             comm.on('child_added', snepp => {
                 revise.push({
@@ -56,7 +69,7 @@ class Multifunctionall  extends Component {
             });
 
             // star
-            const rom = app.database().ref().child('app').child('panels').child('accommodation').child('items').child(snap.key).child('rate');
+            const rom = app.database().ref().child('app').child('timeline').child('post').child('items').child(snap.key).child('rate');
             var i=0;
             var rate=0;
             var orate=0;
@@ -71,8 +84,11 @@ class Multifunctionall  extends Component {
                 id:snap.key,
                 revises:  revise,
                 name:snap.child('name').val(),
+                user:snap.child('user').val(),
                 link:snap.child('link').val(),
                 text:snap.child('text').val(),
+                need:snap.child('need').val(),
+                more:snap.child('more').val(),
                 star: orate
 
             })
@@ -87,9 +103,9 @@ class Multifunctionall  extends Component {
         });
     }
 
-    // enter for rate
+    // enter for Rate
     rchange = (id, value) => {
-        const rootstar = app.database().ref().child('app').child('panels').child('accommodation').child('items');
+        const rootstar = app.database().ref().child('app').child('timeline').child('post').child('items');
         rootstar.child(id).child('rate').push().set(value);
         alert( "Your Rating is saved " + id);
         this.forceUpdate();
@@ -107,20 +123,28 @@ class Multifunctionall  extends Component {
                 {this.state.panel1.map((panel) =>{
 
                     return(
-                        <div key={panel.id}>
-                            <ListGroupItem> <a className="items" href={panel.link}> {panel.name} </a>
+                        <div  className="paddin" key={panel.id}>
+                            <ListGroupItem>
 
+                                <h2 className="userr">
+                                    <Link to={"/show-profile/" + panel.user}> {panel.user} </Link>
+                                </h2>
+                                <a className="items" href={panel.link}> {panel.name} </a>
+                                <h2> Explanation </h2>
                                 <p>{panel.text}</p>
+                                <h2> Need </h2>
+                                <p>{panel.need}</p>
+                                <h2>More </h2>
+                                <p>{panel.more}</p>
 
                                 <Star value={panel.star}  onChange={(v) => this.rchange(panel.id,v)} />
 
-
-                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"accommodation"}  panel={"panels"} />
+                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"post"} panel={"timeline"} />
 
 
                             </ListGroupItem>
 
-                            <ListGroupItem>&hellip;</ListGroupItem>
+
                         </div>
                     )
                 })}
@@ -130,4 +154,4 @@ class Multifunctionall  extends Component {
     }
 }
 
-export default Multifunctionall ;
+export default Timeline ;

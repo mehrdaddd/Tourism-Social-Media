@@ -41,7 +41,7 @@ class Commentt extends Component {
     //push data to database
     enterr = (e) => {
 
-        const rootp = app.database().ref().child('app').child('panels').child(this.props.addr).child('items').child(this.props.onPressEnterr).child('comment group');
+        const rootp = app.database().ref().child('app').child(this.props.panel).child(this.props.addr).child('items').child(this.props.onPressEnterr).child('comment group');
         var d = new Date();
         const data = {
 

@@ -8,7 +8,6 @@ import  AuthUserContext from './AuthUserContext';
 const Navigation =(  ) =>
 
     <AuthUserContext.Consumer>
-
         { authUser => authUser
             ? <NavigationAuth />
             : <NavigationNonAuth /> }
@@ -21,19 +20,17 @@ const NavigationNonAuth=() =>
         { /* <li><Link to={routes.New}> New </Link></li> */}
         <li><Link to={routes.SIGN_IN}> Sign In </Link></li>
         <li><Link to={routes.SIGN_UP}> Sign Up </Link></li>
+        <li><Link to={routes.TIMELINE}> Timeline </Link></li>
     </ul>
 
 const NavigationAuth =() =>
     <div >
-
       <SignOutButton />
-
-    <ul className="navigation">
-
-        <li><Link to={routes.HOME}> Home </Link></li>
-        <li><Link to={routes.ACCOUNT}> Account </Link></li>
-
-    </ul>
+        <ul className="navigation">
+            <li><Link to={routes.HOME}> Home </Link></li>
+            <li><Link to={routes.ACCOUNT}> Account </Link></li>
+            <li><Link to={routes.TIMELINE}> Timeline </Link></li>
+        </ul>
     </div>
 
         export default Navigation;

@@ -11,7 +11,8 @@ const INITIAL_STATE= {
     email: '',
     valueweb:'',
     valueCompany:'',
-    valueWebExplanation:''
+    valueWebExplanation:'',
+    ro:"panels"
 
 };
 
@@ -41,6 +42,7 @@ class AddMore extends Component {
            link: 'https://'+this.state.valueweb,
            name: this.state.valueCompany,
            text: this.state.valueWebExplanation,
+           ro:"panels"
        };
 
        addroot.push(data);
@@ -57,7 +59,7 @@ class AddMore extends Component {
             <form className= "addmore" onSubmit={this.onSubmit}>
 
                 <FormGroup>
-                    <ControlLabel> <h1>Add company </h1></ControlLabel>
+                <ControlLabel> <h1>Add company </h1></ControlLabel>
                 </FormGroup>
 
                 <FormGroup >

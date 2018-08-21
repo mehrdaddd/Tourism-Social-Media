@@ -115,7 +115,7 @@ class Multifunctionall  extends Component {
                                 <Star value={panel.star}  onChange={(v) => this.rchange(panel.id,v)} />
 
 
-                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"tours"} />
+                                <Commentt onPressEnterr={panel.id} lm={panel.revises} addr={"tours"} panel={"panels"} />
 
 
                             </ListGroupItem>
