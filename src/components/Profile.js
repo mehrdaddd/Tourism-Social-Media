@@ -11,6 +11,9 @@ import  AuthUserContext from './AuthUserContext';
 import * as routes from "../constants/routes";
 import {firebase} from "../firebase";
 
+
+
+
 const INITIAL_STATE = {
     Namee:0,
     EmailAddress: 0,
@@ -43,17 +46,21 @@ class Profile extends Component {
         this.fill = this.fill.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.changee = this.changee.bind(this);
+
     }
+
 
 
     foo = ( authuser) => item => {
         console.log(authuser);
         if (item.EmailAddress === authuser.email) {
             this.state.n = 1;
+
         }
     };
 
     fill = ( authuser) => item => {
+
         if (item.EmailAddress === authuser.email) {
             this.state.EmailAddress = authuser.email;
             return 1;
@@ -65,6 +72,7 @@ class Profile extends Component {
     };
 
     componentWillMount() {
+
         const ppro= this.state.pro ;
         this.userroot.on('child_added', s => {
             ppro.push({
@@ -147,6 +155,7 @@ class Profile extends Component {
 
 
     changee = ( item)=> {
+
         const changeeroot= app.database().ref().child('app').child('userprofile').child(item.id);
         const {
             Namee,
@@ -199,10 +208,13 @@ class Profile extends Component {
             <div>
 
                 <AuthUserContext.Consumer>
+
                     {authUser =>  this.state.pro.map(this.foo(authUser))}
-                        </AuthUserContext.Consumer>
-                        <AuthUserContext.Consumer>
+                </AuthUserContext.Consumer>
+                <AuthUserContext.Consumer>
+
                     {authUser =>
+
                         <div >
                             {this.state.pro.filter(this.fill( authUser)).map( item => {
                                 return (
@@ -230,7 +242,7 @@ class Profile extends Component {
                                                                          placeholder={authUser.email}
                                                                          value={authUser.email}
 
-                                                                         />
+                                                        />
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -466,10 +478,12 @@ class Profile extends Component {
 
 
                                         </MediaQuery>
+
                                     </div>
                                 )
                             })}
                         </div>
+
                     }
                 </AuthUserContext.Consumer>
             </div>
@@ -501,5 +515,3 @@ const authCondition = (authUser) =>  !!authUser ;
 export default WithAuthorization (authCondition) (Profile);
 
 export {ProfileForm};
-
-

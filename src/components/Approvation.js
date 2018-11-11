@@ -66,6 +66,7 @@ class Approvation extends Component {
         this.approveroot.child(add.id).remove();
 
         //Alert
+
         alert(" The Company is approved");
         this.forceUpdate();
 

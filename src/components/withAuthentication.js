@@ -7,25 +7,36 @@ const WithAuthentication = (Component) => {
         constructor(props){
             super(props);
             this.state = {
-              authUser: null,
+                authUser: null,
             };
         }
         componentDidMount() {
             firebase.auth.onAuthStateChanged(authUser => {
+
                 authUser
                     ? this.setState(() => ({authUser}))
+
                     : this.setState (() => ({ authUser: null}));
+
             });
+
+
         }
+
+
         render (){
-             const {authUser}= this.state;
-              return (
-                   <AuthUserContext.Provider value={authUser}>
-                   <Component/>
-                   </AuthUserContext.Provider>
+            const {authUser}= this.state;
+
+            return (
+                <AuthUserContext.Provider value={authUser}>
+                    <Component />
+
+                </AuthUserContext.Provider>
             );
         }
     }
-return WithAuthentication;
+
+    return WithAuthentication;
 }
+
 export default WithAuthentication;

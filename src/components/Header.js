@@ -9,11 +9,11 @@ class Header extends Component {
         return(
                 <header className="App-header">
                     <div >
-
                         <img className="App-logo" src={l} alt="The Pulpit Rock" width="200" height="80" />
                         <Navigation  />
                     </div >
                     <p className="whitt">The more Travel the more ...</p>
+
                 </header>
         );
     }

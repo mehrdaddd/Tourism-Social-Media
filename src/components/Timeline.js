@@ -6,7 +6,7 @@ import Commentt from "./Commentt";
 import {app } from './../firebase/firebase';
 import {Link} from 'react-router-dom' ;
 
-        //   <Link to={{
+//   <Link to={{
 //                                         pathname: "/showProfile",
 //                                         search: '?sort=name',
 //                                         hash: '#the-hash',
@@ -43,6 +43,7 @@ class Timeline  extends Component {
     // database interaction with star comment cmponent
     componentWillMount() {
         const  ppanel1=this.state.panel1 ;
+
         // information of header
         this.mainroot.on('value', s => {
                 this.setState({
@@ -51,8 +52,9 @@ class Timeline  extends Component {
                 });
             }
         )
-
+        // comentt
         this.root.on('child_added', snap => {
+
             //comment
             const comm = app.database().ref().child('app').child('timeline').child('post').child('items').child(snap.key).child('comment group');
             const revise=[] ;
@@ -63,7 +65,9 @@ class Timeline  extends Component {
                     date:  snepp.child('date').val(),
                     text:  snepp.child('text').val()
                 })
+
             });
+
             // star
             const rom = app.database().ref().child('app').child('timeline').child('post').child('items').child(snap.key).child('rate');
             var i=0;
@@ -74,6 +78,7 @@ class Timeline  extends Component {
                 rate += sneep.val();
             })
             orate = rate/i;
+
             // main component
             ppanel1.push({
                 id:snap.key,
@@ -85,10 +90,13 @@ class Timeline  extends Component {
                 need:snap.child('need').val(),
                 more:snap.child('more').val(),
                 star: orate
+
             })
+
             ppanel1.sort(function (b, a) {
                 return a.star - b.star;
             });
+
             this.setState({
                 panel1: ppanel1
             });
@@ -102,9 +110,6 @@ class Timeline  extends Component {
         alert( "Your Rating is saved " + id);
         this.forceUpdate();
     }
-
-
-
 
     render() {
 

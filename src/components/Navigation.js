@@ -3,10 +3,12 @@ import {Link} from 'react-router-dom';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 import  AuthUserContext from './AuthUserContext';
+
 import HomeButton from './HomeButton';
 import AccountButton from './AccountButton';
 import TimelineButton from './TimelineButton';
 import SignInButton from './SignButton';
+
 
 
 
@@ -20,6 +22,7 @@ const Navigation =(  ) =>
 
 
 const NavigationNonAuth=() =>
+
     <div>
         <SignInButton/>
         <TimelineButton/>
@@ -34,6 +37,7 @@ const NavigationAuth =() =>
         <AccountButton/>
         <TimelineButton/>
         <HomeButton/>
+
     </div>
 
         export default Navigation;

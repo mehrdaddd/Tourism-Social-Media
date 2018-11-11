@@ -30,7 +30,6 @@ class Home extends Component {
                     <div className="container">
 
 
-
                         <h1 className="page">
                             The Best Tourism Companies
                         </h1>

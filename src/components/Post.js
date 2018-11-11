@@ -5,6 +5,7 @@ import WithAuthorization from './withAuthorizationnnn';
 import {Link} from 'react-router-dom' ;
 import  AuthUserContext from './AuthUserContext';
 
+
 /*
         <span>
                     <ControlLabel>Display Name </ControlLabel>
@@ -34,19 +35,24 @@ const INITIAL_STATE= {
     user: ''
 
 };
-// to change the variables for check box
+
+// to change the variables
+
 const byPropKey = (propertyName, value, user= "UserName") => () => ({
     [propertyName]: value,
     user: user
 });
 
+
 // to change the variables for text
 const byPropKeyy = (propertyName, value) => () => ({[propertyName]: !value,});
+
 class Post extends Component {
     constructor(props){
         super(props);
         this.state= { ...INITIAL_STATE};
     }
+
 
     // save data in database
     onSubmit = (event) =>       {
@@ -81,6 +87,7 @@ class Post extends Component {
 
 
     render() {
+
         return (
 
             <AuthUserContext.Consumer>
@@ -119,6 +126,7 @@ class Post extends Component {
                                 inline>Accommodation</Checkbox>
                             <Checkbox onChange={event => this.setState(byPropKeyy('train', this.state.train))}
                                       inline>Train</Checkbox>
+
                         </FormGroup>
 
 

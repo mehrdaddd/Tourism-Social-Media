@@ -112,11 +112,13 @@ render() {
 
 
 const SignUpLink=() =>
+
     <h2>
         Don't have an account?
         {''}
         <Link to={routes.SIGN_UP}> Sign Up  </Link>
     </h2>
+
 
 export default withRouter(SignUpPage);
 

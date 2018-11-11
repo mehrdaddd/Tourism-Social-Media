@@ -143,8 +143,9 @@ class AddMore extends Component {
                 <Button type="submit" className="submit" >Submit</Button>
             </form>
         );
-    }x
-}
+    }
+    }
+
 
             const AddMoreForm = () =>
                 <form className="loginStyles">
